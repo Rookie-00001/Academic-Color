@@ -1,0 +1,85 @@
+{
+  "all": {
+    "name": "全部领域",
+    "icon": "📚",
+    "description": "包含所有研究领域"
+  },
+  "natural_science": {
+    "name": "自然科学",
+    "icon": "☘",
+    "description": "基础自然科学研究",
+    "subcategories": {
+      "comprehensive": {
+        "name": "综合类",
+        "icon": "🌟",
+        "description": "综合性科学期刊"
+      },
+      "physics": {
+        "name": "物理学",
+        "icon": "⚛️",
+        "description": "物理科学研究"
+      },
+      "biology": {
+        "name": "生物学",
+        "icon": "🐞",
+        "description": "生物学基础研究"
+      },
+      "chemistry": {
+        "name": "化学",
+        "icon": "🔥",
+        "description": "化学相关研究"
+      }
+    }
+  },
+  "engineering_technology": {
+    "name": "工程技术",
+    "icon": "⚙️",
+    "description": "工程技术领域研究",
+    "subcategories": {
+      "mechanical_engineering": {
+        "name": "机械工程",
+        "icon": "🔧",
+        "description": "机械工程相关研究"
+      },
+      "computer_science": {
+        "name": "计算机科学",
+        "icon": "💻",
+        "description": "计算机科学与技术"
+      }
+    }
+  },
+  "medical_life_science": {
+    "name": "医学与生命科学",
+    "icon": "✚",
+    "description": "医学和生命科学研究",
+    "subcategories": {
+      "clinical_medicine": {
+        "name": "临床医学",
+        "icon": "☊",
+        "description": "临床医学研究"
+      },
+      "basic_medicine": {
+        "name": "基础医学",
+        "icon": "♥",
+        "description": "基础医学研究"
+      }
+    }
+  },
+  "interdisciplinary": {
+    "name": "交叉学科",
+    "icon": "🔗",
+    "description": "跨学科交叉研究",
+    "subcategories": {
+      "environmental_science": {
+        "name": "环境科学",
+        "icon": "♻️",
+        "description": "环境与生态研究"
+      },
+      "bioinformatics": {
+        "name": "生物信息学",
+        "icon": "📊",
+        "description": "生物信息学研究"
+      }
+    }
+  }
+}

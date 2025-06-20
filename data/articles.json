@@ -1,0 +1,380 @@
+[
+  {
+    "id": 1,
+    "journal": "nature",
+    "year": 2025,
+    "field": "natural_science",
+    "subfield": "comprehensive",
+    "title": "Major expansion in the human niche preceded out of Africa dispersal",
+    "authors": "Hallett, E.Y., Leonardi, M., Cerasoni, J.N.",
+    "doi": "10.1038/s41586-025-09154-0",
+    "tags": ["Archaeology", "Ecological modelling", "Evolutionary ecology"],
+    "figures": [
+      {
+        "id": "fig_1_1",
+        "name": "Fig. 1: Map of dated archaeological sites in Africa",
+        "description": "非洲考古遗址地图",
+        "figure_type": "scatter_plot",
+        "image_path": "data/images/article_1_fig_1.jpg",
+        "colors": [
+          {
+            "hex": "#433764",
+            "rgb": "rgb(67, 55, 100)",
+            "name": "time",
+            "usage": "考古时间范围"
+          },
+          {
+            "hex": "#e48566",
+            "rgb": "rgb(228, 133, 102)",
+            "name": "time",
+            "usage": "考古时间范围"
+          },
+          {
+            "hex": "#a05179",
+            "rgb": "rgb(160, 81, 121)",
+            "name": "time",
+            "usage": "考古时间范围"
+          },
+          {
+            "hex": "#c66571",
+            "rgb": "rgb(198, 101, 113)",
+            "name": "time",
+            "usage": "考古时间范围"
+          }
+        ]
+      },
+      {
+        "id": "fig_1_2",
+        "name": "Fig. 4: Comparison of the niche area",
+        "description": "生态位面积的比较",
+        "figure_type": "折线图",
+        "image_path": "data/images/article_1_fig_2.jpg",
+        "colors": [
+          {
+            "hex": "#c6c687",
+            "rgb": "rgb(198, 198, 135)",
+            "name": "savanna",
+            "usage": "稀树草原"
+          },
+          {
+            "hex": "#668441",
+            "rgb": "rgb(102, 132, 65)",
+            "name": "forest",
+            "usage": "森林"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "journal": "nejm",
+    "year": 2024,
+    "field": "medical_life_science",
+    "subfield": "clinical_medicine",
+    "title": "Trial of Early Minimally Invasive Removal of Intracerebral Hemorrhage",
+    "authors": "Gustavo Pradilla, M.D. Jonathan J. Ratcliff, M.D., M.P.H., Alex J. Hall, D.H.Sc.",
+    "doi": "10.1056/NEJMoa2308440",
+    "tags": ["Intracerebral Hemorrhage", "Minimally Invasive Surgery", "Early Intervention"],
+    "figures": [
+      {
+        "id": "fig_2_1",
+        "name": "Figure 2 - Distribution of Surgery Effect and Observed Scores on the Modified Rankin Scale",
+        "description": "手术效果和改良Rankin量表观察评分的分布",
+        "figure_type": "survival_curve",
+        "image_path": "data/images/article_2_fig_1.jpg",
+        "colors": [
+          {
+            "hex": "#f6fafb",
+            "rgb": "rgb(246, 250, 251)",
+            "name": "0 Group",
+            "usage": "0分组"
+          },
+          {
+            "hex": "#e5eef3",
+            "rgb": "rgb(229, 238, 243)",
+            "name": "1 Group",
+            "usage": "1分组"
+          },
+          {
+            "hex": "#bed2db",
+            "rgb": "rgb(190, 210, 219)",
+            "name": "2 Group",
+            "usage": "2分组"
+          },
+          {
+            "hex": "#afc7d3",
+            "rgb": "rgb(175, 199, 211)",
+            "name": "3 Group",
+            "usage": "3分组"
+          },
+          {
+            "hex": "#6f9aad",
+            "rgb": "rgb(111, 154, 173)",
+            "name": "4 Group",
+            "usage": "4分组"
+          },
+          {
+            "hex": "#326a81",
+            "rgb": "rgb(50, 106, 129)",
+            "name": "5 Group",
+            "usage": "5分组"
+          },
+          {
+            "hex": "#1e4757",
+            "rgb": "rgb(30, 71, 87)",
+            "name": "6 Group",
+            "usage": "6分组"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "journal": "prl",
+    "year": 2016,
+    "field": "natural_science",
+    "subfield": "physics",
+    "title": "GW150914: The Advanced LIGO Detectors in the Era of First Discoveries",
+    "authors": "B. P. Abbott, R. Abbott, T. D. Abbott, M. R. Abernathy",
+    "doi": "10.1103/PhysRevLett.116.131103",
+    "tags": ["Gravitational Waves", "GW150914", "Astrophysical Discovery"],
+    "figures": [
+      {
+        "id": "fig_3_1",
+        "name": "Figure 3 - 探测器位移灵敏度",
+        "description": "汉福德先进LIGO探测器在第一次观测运行O1期间的位移灵敏度",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_3_fig_1.png",
+        "colors": [
+          {
+            "hex": "#ea272a",
+            "rgb": "rgb(234, 39, 42)",
+            "name": "Measured",
+            "usage": "测量值"
+          },
+          {
+            "hex": "#435aa5",
+            "rgb": "rgb(67, 90, 165)",
+            "name": "Quantum",
+            "usage": "量子"
+          },
+          {
+            "hex": "#6cb48d",
+            "rgb": "rgb(108, 180, 141)",
+            "name": "Thermal",
+            "usage": "热性能"
+          },
+          {
+            "hex": "#a47748",
+            "rgb": "rgb(164, 119, 72)",
+            "name": "Seismic",
+            "usage": "地震"
+          },
+          {
+            "hex": "#f7a25c",
+            "rgb": "rgb(247, 162, 92)",
+            "name": "Newtonian",
+            "usage": "牛顿型"
+          },
+          {
+            "hex": "#848484",
+            "rgb": "rgb(132, 132, 132)",
+            "name": "Other DOF",
+            "usage": "其他"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "journal": "nature_communications",
+    "year": 2025,
+    "field": "natural_science",
+    "subfield": "comprehensive",
+    "title": "Two major ecological shifts shaped 60 million years of ungulate faunal evolution",
+    "authors": "Blanco, F., Lazagabaster, I.A., Sanisidro, Ó.",
+    "doi": "10.1038/s41467-025-59974-x",
+    "tags": ["Ecological networks", "Palaeoecology", "Palaeontology", "Phylogenetics"],
+    "figures": [
+      {
+        "id": "fig_4_1",
+        "name": "Fig. 2 - 功能多样性散点图",
+        "description": "大陆有蹄类动物群落的功能多样性动态",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_4_fig_1.png",
+        "colors": [
+          {
+            "hex": "#d5e5c9",
+            "rgb": "rgb(213, 229, 201)",
+            "name": "Functional Shannon",
+            "usage": "香农指数"
+          },
+          {
+            "hex": "#d4dee9",
+            "rgb": "rgb(212, 222, 233)",
+            "name": "Functional Evenness",
+            "usage": "功能多样性"
+          },
+          {
+            "hex": "#d9c2df",
+            "rgb": "rgb(217, 194, 223)",
+            "name": "Functional richnness",
+            "usage": "功能丰富度"
+          },
+          {
+            "hex": "#e2795a",
+            "rgb": "rgb(226, 121, 90)",
+            "name": "America",
+            "usage": "美洲"
+          },
+          {
+            "hex": "#eac56c",
+            "rgb": "rgb(234, 197, 108)",
+            "name": "Europe",
+            "usage": "欧洲"
+          },
+          {
+            "hex": "#299d90",
+            "rgb": "rgb(41, 157, 144)",
+            "name": "Asia",
+            "usage": "亚洲"
+          },
+          {
+            "hex": "#895c56",
+            "rgb": "rgb(137, 92, 86)",
+            "name": "Africa",
+            "usage": "非洲"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "journal": "nature_physics",
+    "year": 2025,
+    "field": "natural_science",
+    "subfield": "physics",
+    "title": "Thermopower probes of emergent local moments in magic-angle twisted bilayer graphene",
+    "authors": "Ayan Ghosh, Souvik Chakraborty, Ranit Dutta, Adhip Agarwala, K. Watanabe",
+    "doi": "10.1038/s41567-025-02849-1",
+    "tags": ["Electronic properties and devices", "Electronic properties and materials"],
+    "figures": [
+      {
+        "id": "fig_5_1",
+        "name": "Fig. 2 - 低温演化和热功率对比图",
+        "description": "MATBLG的R和VTh的低温演化，与带费米子的预期热功率对比",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_5_fig_1.png",
+        "colors": [
+          {
+            "hex": "#ff3533",
+            "rgb": "rgb(255, 53, 51)",
+            "name": "50.0K",
+            "usage": "50.0K"
+          },
+          {
+            "hex": "#fec71a",
+            "rgb": "rgb(254, 199, 26)",
+            "name": "40.0K",
+            "usage": "40.0K"
+          },
+          {
+            "hex": "#2ad92d",
+            "rgb": "rgb(42, 217, 45)",
+            "name": "32.0K",
+            "usage": "32.0K"
+          },
+          {
+            "hex": "#35e7df",
+            "rgb": "rgb(53, 231, 223)",
+            "name": "18.0K",
+            "usage": "18.0K"
+          },
+          {
+            "hex": "#2c97ff",
+            "rgb": "rgb(44, 151, 255)",
+            "name": "12.0K",
+            "usage": "12.0K"
+          },
+          {
+            "hex": "#2f2ffd",
+            "rgb": "rgb(47, 47, 253)",
+            "name": "6.0K",
+            "usage": "6.0K"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "journal": "science",
+    "year": 2025,
+    "field": "natural_science",
+    "subfield": "comprehensive",
+    "title": "Plastic bag bans and fees reduce harmful bag litter on shorelines",
+    "authors": "Anna Papp, Kimberly L. Oremus",
+    "doi": "10.1126/science.adp9274",
+    "tags": ["Plastic Bag Pollution", "Environmental Policy", "Bag Bans"],
+    "figures": [
+      {
+        "id": "fig_6_1",
+        "name": "Figure 1Ba - 美国人口受政策影响的地理范围图",
+        "description": "美国人口受政策影响的州、乡村地理范围",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_6_fig_1.png",
+        "colors": [
+          {
+            "hex": "#928b92",
+            "rgb": "rgb(146, 139, 146)",
+            "name": "State",
+            "usage": "州"
+          },
+          {
+            "hex": "#e3c7d5",
+            "rgb": "rgb(227, 199, 213)",
+            "name": "County",
+            "usage": "乡村"
+          },
+          {
+            "hex": "#fcf0e4",
+            "rgb": "rgb(252, 240, 228)",
+            "name": "Town",
+            "usage": "街镇"
+          }
+        ]
+      },
+      {
+        "id": "fig_6_2",
+        "name": "Figure 1Bb - 政策类型图",
+        "description": "按政策类型统计政策图",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_6_fig_2.png",
+        "colors": [
+          {
+            "hex": "#6b879d",
+            "rgb": "rgb(107, 135, 157)",
+            "name": "Bans",
+            "usage": "完全禁令"
+          },
+          {
+            "hex": "#72aabb",
+            "rgb": "rgb(114, 170, 187)",
+            "name": "Partial Bans",
+            "usage": "部分禁止"
+          },
+          {
+            "hex": "#e48078",
+            "rgb": "rgb(228, 128, 120)",
+            "name": "Fees",
+            "usage": "罚款禁令"
+          }
+        ]
+      }
+    ]
+  }
+]

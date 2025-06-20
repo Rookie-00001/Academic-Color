@@ -1,0 +1,140 @@
+{
+  "nature": {
+    "name": "Nature",
+    "color": "#2563eb",
+    "field": "natural_science",
+    "subfield": "comprehensive"
+  },
+  "nature_communications": {
+    "name": "Nature Communications",
+    "color": "#ec2727",
+    "field": "natural_science",
+    "subfield": "comprehensive"
+  },
+  "science": {
+    "name": "Science",
+    "color": "#dc2626",
+    "field": "natural_science",
+    "subfield": "comprehensive"
+  },
+  "prl": {
+    "name": "Phys. Rev. Lett.",
+    "color": "#2563eb",
+    "field": "natural_science",
+    "subfield": "physics"
+  },
+  "nature_physics": {
+    "name": "Nature Physics",
+    "color": "#7c3aed",
+    "field": "natural_science",
+    "subfield": "physics"
+  },
+  "physical_review_x": {
+    "name": "Physical Review X",
+    "color": "#1e40af",
+    "field": "natural_science",
+    "subfield": "physics"
+  },
+  "cell": {
+    "name": "Cell",
+    "color": "#059669",
+    "field": "natural_science",
+    "subfield": "biology"
+  },
+  "nature_cell_biology": {
+    "name": "Nature Cell Biology",
+    "color": "#0891b2",
+    "field": "natural_science",
+    "subfield": "biology"
+  },
+  "jacs": {
+    "name": "JACS",
+    "color": "#dc2626",
+    "field": "natural_science",
+    "subfield": "chemistry"
+  },
+  "angew": {
+    "name": "Angew. Chem.",
+    "color": "#059669",
+    "field": "natural_science",
+    "subfield": "chemistry"
+  },
+  "nature_materials": {
+    "name": "Nature Materials",
+    "color": "#8b5cf6",
+    "field": "engineering_technology",
+    "subfield": "mechanical_engineering"
+  },
+  "advanced_materials": {
+    "name": "Advanced Materials",
+    "color": "#06b6d4",
+    "field": "engineering_technology",
+    "subfield": "mechanical_engineering"
+  },
+  "nature_machine_intelligence": {
+    "name": "Nature Machine Intelligence",
+    "color": "#7c2d12",
+    "field": "engineering_technology",
+    "subfield": "computer_science"
+  },
+  "science_robotics": {
+    "name": "Science Robotics",
+    "color": "#b91c1c",
+    "field": "engineering_technology",
+    "subfield": "computer_science"
+  },
+  "nejm": {
+    "name": "NEJM",
+    "color": "#7c3aed",
+    "field": "medical_life_science",
+    "subfield": "clinical_medicine"
+  },
+  "lancet": {
+    "name": "The Lancet",
+    "color": "#ea580c",
+    "field": "medical_life_science",
+    "subfield": "clinical_medicine"
+  },
+  "jama": {
+    "name": "JAMA",
+    "color": "#059669",
+    "field": "medical_life_science",
+    "subfield": "clinical_medicine"
+  },
+  "nature_medicine": {
+    "name": "Nature Medicine",
+    "color": "#c2410c",
+    "field": "medical_life_science",
+    "subfield": "basic_medicine"
+  },
+  "nature_biotechnology": {
+    "name": "Nature Biotechnology",
+    "color": "#0d9488",
+    "field": "medical_life_science",
+    "subfield": "basic_medicine"
+  },
+  "climate_change": {
+    "name": "Nature Climate Change",
+    "color": "#10b981",
+    "field": "interdisciplinary",
+    "subfield": "environmental_science"
+  },
+  "environ_sci_tech": {
+    "name": "Environ. Sci. Technol.",
+    "color": "#22c55e",
+    "field": "interdisciplinary",
+    "subfield": "environmental_science"
+  },
+  "nature_methods": {
+    "name": "Nature Methods",
+    "color": "#8b5cf6",
+    "field": "interdisciplinary",
+    "subfield": "bioinformatics"
+  },
+  "bioinformatics": {
+    "name": "Bioinformatics",
+    "color": "#3b82f6",
+    "field": "interdisciplinary",
+    "subfield": "bioinformatics"
+  }
+}

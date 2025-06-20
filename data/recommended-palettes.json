@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "name": "Nature Inspired",
+      "description": "受自然色彩启发的配色方案",
+      "colors": ["#2d5a27", "#5cb3a8", "#9bc53d", "#f5de01", "#ff8c00"],
+      "category": "natural",
+      "likes": 234,
+      "downloads": 1520,
+      "author": "Color Studio",
+      "created_date": "2024-01-15",
+      "tags": ["nature", "earth", "organic"]
+    },
+    {
+      "id": 2,
+      "name": "Ocean Depths",
+      "description": "深海色彩渐变方案",
+      "colors": ["#003f5c", "#2f4b7c", "#665191", "#a05195", "#d45087"],
+      "category": "gradient",
+      "likes": 189,
+      "downloads": 945,
+      "author": "Academic Design",
+      "created_date": "2024-02-03",
+      "tags": ["ocean", "gradient", "deep"]
+    },
+    {
+      "id": 3,
+      "name": "Sunset Vibes",
+      "description": "温暖日落色调",
+      "colors": ["#ff6b6b", "#feca57", "#48dbfb", "#ff9ff3", "#54a0ff"],
+      "category": "warm",
+      "likes": 167,
+      "downloads": 823,
+      "author": "Color Lab",
+      "created_date": "2024-01-28",
+      "tags": ["sunset", "warm", "vibrant"]
+    },
+    {
+      "id": 4,
+      "name": "Medical Journal",
+      "description": "医学期刊专用配色",
+      "colors": ["#e74c3c", "#3498db", "#2ecc71", "#f39c12", "#9b59b6"],
+      "category": "medical",
+      "likes": 145,
+      "downloads": 1203,
+      "author": "Medical Viz",
+      "created_date": "2024-02-10",
+      "tags": ["medical", "professional", "clinical"]
+    },
+    {
+      "id": 5,
+      "name": "Minimal Dark",
+      "description": "简约深色系配色",
+      "colors": ["#2c3e50", "#34495e", "#7f8c8d", "#95a5a6", "#bdc3c7"],
+      "category": "monochrome",
+      "likes": 123,
+      "downloads": 678,
+      "author": "Minimal Studio",
+      "created_date": "2024-02-18",
+      "tags": ["minimal", "dark", "professional"]
+    },
+    {
+      "id": 6,
+      "name": "Pastel Rainbow",
+      "description": "柔和彩虹",
+      "colors": ["#ffadad", "#ffd6a5", "#fdffb6", "#caffbf", "#9bf6ff", "#a0c4ff", "#bdb2ff", "#ffc6ff"],
+      "category": "rainbow",
+      "likes": 98,
+      "downloads": 456,
+      "author": "Tropical Design",
+      "created_date": "2025-03-01",
+      "tags": ["pastel", "bright", "rainbow"]
+    }
+  ]
