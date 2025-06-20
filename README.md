@@ -2,7 +2,7 @@
 
 一个专为学术研究和科学可视化设计的配色方案库，收录来自顶级期刊的精美图表配色。
 
-[主界面预览](docs/images/main-interface.png)
+[主界面预览](data/images/intro/main.png)
 
 ## ✨ 主要特性
 
@@ -12,8 +12,6 @@
 - 📊 **实时预览** - 内置图表预览工具，实时查看配色效果
 - 🌙 **深色模式** - 支持明暗主题切换，保护视力
 - 📱 **响应式** - 完美适配桌面端和移动端
-
-[配色预览](docs/images/color-preview.png)
 
 ## 🚀 快速开始
 
@@ -40,19 +38,19 @@ open http://localhost:8000
 ## 🎯 核心功能
 
 ### 配色浏览
-[配色浏览](docs/images/browse-colors.png)
+[配色浏览](data/images/intro/browse.png)
 - 按研究领域分类浏览
 - 详细的配色信息和使用说明
 - 原始图表预览
 
 ### 配色预览工具
-[预览工具](docs/images/preview-tool.png)
+[预览工具](data/images/intro/preview-tool.png)
 - 折线图、散点图、柱状图、饼图预览
 - 自定义颜色数量和配色方案
 - 实时效果预览
 
 ### 我的配色
-[我的配色](docs/images/my-palettes.png)
+[我的配色](data/images/intro/my.png)
 - 创建个人配色方案
 - 随机配色生成
 - 导出和分享功能
