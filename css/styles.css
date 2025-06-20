@@ -1,0 +1,155 @@
+.collapsible {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.collapsible.expanded {
+    max-height: 1000px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 320px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.main-content {
+    margin-left: 320px;
+    margin-top: 80px;
+}
+
+.main-content-full {
+    margin-left: 0;
+    margin-top: 80px;
+    padding-top: 3rem;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.chart-container {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+
+.breadcrumb {
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+    padding-top: 1rem;
+    margin-top: 80px;
+}
+
+.logo-hover {
+    transition: all 0.3s ease;
+}
+
+.logo-hover:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+.title-hover {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.title-hover:hover {
+    transform: translateX(5px);
+}
+
+.back-btn {
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: translateX(-5px);
+    background: rgba(59, 130, 246, 0.1);
+}
+
+/* 滚动条样式 */
+.sidebar::-webkit-scrollbar { width: 6px; }
+.sidebar::-webkit-scrollbar-track { background: var(--bg-tertiary); }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+.sidebar::-webkit-scrollbar-thumb:hover { background: var(--text-tertiary); }
+
+.centered-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.main-content-with-padding {
+    margin-left: 0;
+    margin-top: 60px;
+    padding-top: 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* 学科图标样式 */
+.field-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+.icon-biology { background: linear-gradient(135deg, #10b981, #059669); color: white; }
+.icon-medicine { background: linear-gradient(135deg, #ef4444, #dc2626); color: white; }
+.icon-physics { background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; }
+.icon-chemistry { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; }
+.icon-neuroscience { background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; }
+.icon-multidisciplinary { background: linear-gradient(135deg, #6366f1, #4f46e5); color: white; }
+.icon-materials { background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; }
+.icon-environmental { background: linear-gradient(135deg, #22c55e, #16a34a); color: white; }
+.icon-all { background: linear-gradient(135deg, #64748b, #475569); color: white; }
+
+/* 移动设备适配 */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: -320px;
+        transition: left 0.3s ease;
+        z-index: 30;
+    }
+
+    .sidebar.mobile-open {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .main-content-full {
+        padding: 1rem;
+    }
+
+    .centered-container {
+        padding: 0 1rem;
+    }
+
+    .palette-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+    }
+
+    .figures-grid-multiple {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
