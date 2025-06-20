@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学术配色库 - Academic Color</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body class="bg-theme-secondary" data-theme="light">
+    <!-- 统一标题栏 -->
+    <div class="fixed top-0 left-0 right-0 bg-theme-primary border-b border-theme shadow-sm z-20">
+        <div class="px-8 py-6">
+            <div class="flex items-center justify-between">
+                <!-- 左侧标题 -->
+                <div class="flex items-center space-x-3">
+                    <!-- 返回上一步按钮 -->
+                    <button id="backButton" onclick="goBack()" class="back-btn p-2 rounded-lg border border-theme hover:border-blue-500 transition-all opacity-0 invisible" title="返回上一步">
+                        <svg class="w-4 h-4 text-theme-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    
+                    <!-- 移动端菜单按钮 -->
+                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg border border-theme hover:border-blue-500 transition-all" title="菜单">
+                        <svg class="w-4 h-4 text-theme-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                    
+                    <div onclick="goHome()" class="flex items-center space-x-3 cursor-pointer">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center logo-hover">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5H9a2 2 0 00-2 2v12a4 4 0 004 4h6a2 2 0 002-2V7a2 2 0 00-2-2z"></path>
+                            </svg>
+                        </div>
+                        <div class="title-hover">
+                            <h1 class="text-xl font-bold gradient-text">学术配色库</h1>
+                            <p class="text-sm text-theme-secondary">Academic Color</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧工具栏 -->
+                <div class="flex items-center space-x-4">
+                    <div class="relative hidden md:block">
+                        <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-theme-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="搜索文章、作者、标签..."
+                            class="pl-10 pr-4 py-2 w-80 border border-theme rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-theme-primary text-theme-primary"
+                        />
+                    </div>
+                    <!-- 暗黑模式切换 -->
+                    <button id="themeToggle" class="p-2 rounded-lg bg-theme-tertiary hover:bg-theme-secondary transition-all h-10 w-10 flex items-center justify-center">
+                        <svg id="sunIcon" class="w-4 h-4 text-theme-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg id="moonIcon" class="w-4 h-4 text-theme-primary hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                    <!-- GitHub链接 -->
+                    <a href="https://github.com/Rookie-00001/Academic-Color" target="_blank" class="p-2 rounded-lg bg-theme-tertiary hover:bg-theme-secondary transition-all h-10 w-10 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-theme-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主视图 -->
+    <div id="mainView">
+        <!-- 左侧筛选栏 -->
+        <div id="sidebarOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-25 hidden md:hidden" onclick="toggleMobileMenu()"></div>
+        <div id="sidebar" class="sidebar bg-theme-primary border-r border-theme">
+            <div class="p-6">
+                <!-- 研究领域筛选 -->
+                <div class="mb-6">
+                    <button onclick="toggleSection('fields')" class="flex items-center justify-between w-full text-left mb-3 hover:bg-theme-tertiary p-2 rounded-lg transition-all">
+                        <h3 class="text-sm font-semibold text-theme-primary flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                            </svg>
+                            研究领域
+                        </h3>
+                        <svg id="fieldsChevron" class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                        </svg>
+                    </button>
+                    <div id="fieldsSection" class="collapsible expanded">
+                        <div class="space-y-1" id="fieldsList">
+                            <!-- 将通过JavaScript动态生成 -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 年份筛选 -->
+                <div class="mb-6">
+                    <button onclick="toggleSection('years')" class="flex items-center justify-between w-full text-left mb-3 hover:bg-theme-tertiary p-2 rounded-lg transition-all">
+                        <h3 class="text-sm font-semibold text-theme-primary flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            发表年份
+                        </h3>
+                        <svg id="yearsChevron" class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                        </svg>
+                    </button>
+                    <div id="yearsSection" class="collapsible expanded">
+                        <div class="grid grid-cols-3 gap-2">
+                            <button onclick="filterByYear('all')" class="year-filter px-3 py-2 text-sm rounded-lg transition-all bg-blue-500 text-white" data-year="all">全部</button>
+                            <button onclick="filterByYear('2024')" class="year-filter px-3 py-2 text-sm rounded-lg transition-all bg-theme-tertiary text-theme-primary hover:bg-theme-secondary" data-year="2024">2024</button>
+                            <button onclick="filterByYear('2023')" class="year-filter px-3 py-2 text-sm rounded-lg transition-all bg-theme-tertiary text-theme-primary hover:bg-theme-secondary" data-year="2023">2023</button>
+                            <button onclick="filterByYear('2022')" class="year-filter px-3 py-2 text-sm rounded-lg transition-all bg-theme-tertiary text-theme-primary hover:bg-theme-secondary" data-year="2022">2022</button>
+                            <button onclick="filterByYear('2021')" class="year-filter px-3 py-2 text-sm rounded-lg transition-all bg-theme-tertiary text-theme-primary hover:bg-theme-secondary" data-year="2021">2021</button>
+                            <button onclick="filterByYear('2020')" class="year-filter px-3 py-2 text-sm rounded-lg transition-all bg-theme-tertiary text-theme-primary hover:bg-theme-secondary" data-year="2020">2020</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 配色数量筛选 -->
+                <div class="mb-6">
+                    <button onclick="toggleSection('colorCount')" class="flex items-center justify-between w-full text-left mb-3 hover:bg-theme-tertiary p-2 rounded-lg transition-all">
+                        <h3 class="text-sm font-semibold text-theme-primary flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5H9a2 2 0 00-2 2v12a4 4 0 004 4h6a2 2 0 002-2V7a2 2 0 00-2-2z"></path>
+                            </svg>
+                            配色数量
+                        </h3>
+                        <svg id="colorCountChevron" class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                        </svg>
+                    </button>
+                    <div id="colorCountSection" class="collapsible expanded">
+                        <div class="space-y-2">
+                            <button onclick="filterByColorCount('all')" class="color-count-filter w-full text-left px-3 py-2 rounded-lg transition-all bg-purple-50 text-purple-700 border border-purple-200" data-count="all">
+                                <span class="text-sm">全部颜色</span>
+                            </button>
+                            <button onclick="filterByColorCount('3')" class="color-count-filter w-full text-left px-3 py-2 rounded-lg transition-all hover:bg-theme-tertiary text-theme-primary" data-count="3">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm">3色配色</span>
+                                    <span class="text-xs bg-theme-tertiary px-2 py-1 rounded-full">3</span>
+                                </div>
+                            </button>
+                            <button onclick="filterByColorCount('4')" class="color-count-filter w-full text-left px-3 py-2 rounded-lg transition-all hover:bg-theme-tertiary text-theme-primary" data-count="4">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm">4色配色</span>
+                                    <span class="text-xs bg-theme-tertiary px-2 py-1 rounded-full">4</span>
+                                </div>
+                            </button>
+                            <button onclick="filterByColorCount('5')" class="color-count-filter w-full text-left px-3 py-2 rounded-lg transition-all hover:bg-theme-tertiary text-theme-primary" data-count="5">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm">5色配色</span>
+                                    <span class="text-xs bg-theme-tertiary px-2 py-1 rounded-full">5</span>
+                                </div>
+                            </button>
+                            <button onclick="filterByColorCount('6+')" class="color-count-filter w-full text-left px-3 py-2 rounded-lg transition-all hover:bg-theme-tertiary text-theme-primary" data-count="6+">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm">6色以上</span>
+                                    <span class="text-xs bg-theme-tertiary px-2 py-1 rounded-full">6+</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 底部信息 -->
+                <div class="mt-auto pt-6 border-t border-theme">
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="text-sm font-semibold text-theme-primary mb-2">快速操作</h4>
+                            <div class="space-y-2">
+                                <button onclick="articleEditor.show()" class="w-full px-3 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg hover:from-orange-600 hover:to-red-600 transition-all text-sm">
+                                    添加新文章
+                                </button>
+                                <button onclick="showPreviewTool()" class="w-full px-3 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all text-sm">
+                                    配色预览工具
+                                </button>
+                                <button onclick="showMyPalettes()" class="w-full px-3 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all text-sm">
+                                    我的配色
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-sm font-semibold text-theme-primary mb-2">使用说明</h4>
+                            <div class="text-xs text-theme-secondary space-y-1">
+                                <p>• 点击颜色块复制HEX值</p>
+                                <p>• 点击RGB按钮复制RGB值</p>
+                                <p>• 支持一键复制整套配色</p>
+                                <p>• 可预览不同图表效果</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-sm font-semibold text-theme-primary mb-2">关于项目</h4>
+                            <div class="text-xs text-theme-secondary space-y-1">
+                                <p>作者：LjhaiDj</p>
+                                <p>版本：v1.0.0</p>
+                                <p>更新：2025年6月</p>
+                                <p class="pt-2 border-t border-theme">
+                                    © 2025 Academic Color<br>
+                                    所有配色来源于顶级期刊,如有侵权联系删除。<br>
+                                    配色更新中···
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右侧主内容区 -->
+        <div class="main-content">
+            <div class="p-8">
+                <!-- 移动端搜索 -->
+                <div class="md:hidden mb-6">
+                    <div class="relative">
+                        <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-theme-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <input
+                            type="text"
+                            id="searchInputMobile"
+                            placeholder="搜索文章、作者、标签..."
+                            class="pl-10 pr-4 py-2 w-full border border-theme rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-theme-primary text-theme-primary"
+                        />
+                    </div>
+                </div>
+
+                <!-- 结果统计 -->
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold gradient-text">配色方案</h2>
+                    <p id="resultCount" class="text-theme-secondary mt-1">找到 0 篇文章</p>
+                </div>
+
+                <!-- 文章卡片展示 -->
+                <div id="articlesContainer" class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                    <!-- 文章卡片将通过JavaScript动态生成 -->
+                </div>
+
+                <!-- 无结果提示 -->
+                <div id="noResults" class="text-center py-16 hidden">
+                    <svg class="w-16 h-16 text-theme-tertiary mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    </svg>
+                    <h3 class="text-xl font-medium text-theme-primary mb-2">没有找到匹配的配色方案</h3>
+                    <p class="text-theme-secondary">尝试调整筛选条件或搜索关键词</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 配色预览工具视图 -->
+    <div id="previewView" class="hidden">
+        <div class="main-content-full centered-container">
+            <div class="p-8">
+                <div class="max-w-7xl mx-auto">
+                    <!-- 控制面板 -->
+                    <div class="bg-theme-primary rounded-2xl shadow-lg p-6 mb-8 slide-in">
+                        <h3 class="text-lg font-bold text-theme-primary mb-4">配色设置</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-theme-secondary mb-2">颜色数量</label>
+                                <select id="previewColorCount" class="w-full p-2 border border-theme rounded-lg bg-theme-primary text-theme-primary">
+                                    <option value="3">3 种颜色</option>
+                                    <option value="4" selected>4 种颜色</option>
+                                    <option value="5">5 种颜色</option>
+                                    <option value="6">6 种颜色</option>
+                                    <option value="8">8 种颜色</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-theme-secondary mb-2">配色方案</label>
+                                <select id="colorScheme" class="w-full p-2 border border-theme rounded-lg bg-theme-primary text-theme-primary">
+                                    <option value="custom">自定义配色</option>
+                                    <option value="default">默认配色</option>
+                                    <option value="nature">Nature 风格</option>
+                                    <option value="medical">医学期刊</option>
+                                    <option value="physics">物理期刊</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-theme-secondary mb-2">操作</label>
+                                <div class="flex gap-2">
+                                    <button onclick="resetColors()" class="flex-1 px-3 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-all text-sm">
+                                        重置
+                                    </button>
+                                    <button onclick="randomColors()" class="flex-1 px-3 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-all text-sm">
+                                        随机
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-theme-secondary mb-2">保存</label>
+                                <button onclick="copyCurrentColors()" class="w-full px-3 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all text-sm">
+                                    复制配色
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- 自定义颜色选择器 -->
+                        <div id="customColorSection" class="mt-6">
+                            <label class="block text-sm font-medium text-theme-secondary mb-3">自定义颜色</label>
+                            <div id="colorPickers" class="flex gap-4 justify-center flex-wrap">
+                                <!-- 颜色选择器将通过JavaScript生成 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 图表预览 -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- 折线图 -->
+                        <div class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in" style="animation-delay: 0.1s;">
+                            <h4 class="text-lg font-semibold text-theme-primary mb-4">折线图</h4>
+                            <div class="chart-container">
+                                <canvas id="lineChart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- 散点图 -->
+                        <div class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in" style="animation-delay: 0.2s;">
+                            <h4 class="text-lg font-semibold text-theme-primary mb-4">散点图</h4>
+                            <div class="chart-container">
+                                <canvas id="scatterChart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- 柱状图 -->
+                        <div class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in" style="animation-delay: 0.3s;">
+                            <h4 class="text-lg font-semibold text-theme-primary mb-4">柱状图</h4>
+                            <div class="chart-container">
+                                <canvas id="barChart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- 饼图 -->
+                        <div class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in" style="animation-delay: 0.4s;">
+                            <h4 class="text-lg font-semibold text-theme-primary mb-4">饼图</h4>
+                            <div class="chart-container">
+                                <canvas id="pieChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 我的配色视图 -->
+    <div id="myPalettesView" class="hidden">
+        <div class="main-content-full centered-container">
+            <div class="p-8">
+                <div class="max-w-7xl mx-auto">
+                    <!-- 我的配色 -->
+                    <div class="bg-theme-primary rounded-2xl shadow-lg p-8 mb-8 slide-in">
+                        <div class="text-center mb-6">
+                            <h2 class="text-2xl font-bold gradient-text mb-2">我的配色</h2>
+                            <p class="text-theme-secondary">创建属于你的专属配色方案</p>
+                        </div>
+
+                        <!-- 配色展示区 -->
+                        <div id="paletteDisplay" class="flex rounded-2xl overflow-hidden shadow-lg mb-6">
+                            <!-- 配色块将通过JavaScript生成 -->
+                        </div>
+
+                        <!-- 配色操作工具 -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <button onclick="generateRandomPalette()" class="flex items-center justify-center px-4 py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-all">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                                </svg>
+                                随机生成
+                            </button>
+                            <div>
+                                <input type="text" id="paletteName" placeholder="为配色命名..." class="w-full px-4 py-3 border border-theme rounded-lg bg-theme-primary text-theme-primary">
+                            </div>
+                            <button onclick="savePalette()" class="flex items-center justify-center px-4 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path>
+                                </svg>
+                                保存配色
+                            </button>
+                        </div>
+
+                        <!-- 保存和分享 -->
+                        <div class="flex justify-center space-x-4 flex-wrap gap-2">
+                            <button onclick="exportPalette()" class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all font-medium">
+                                导出到本地
+                            </button>
+                            <button onclick="showFeatureNotAvailable('推荐到配色市场')" class="px-6 py-3 bg-gray-400 text-white rounded-lg hover:bg-gray-500 transition-all font-medium cursor-not-allowed">
+                                推荐到配色市场
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 配色推荐 -->
+                    <div class="bg-theme-primary rounded-2xl shadow-lg p-8 slide-in" style="animation-delay: 0.2s;">
+                        <h3 class="text-xl font-bold text-theme-primary mb-6">配色推荐</h3>
+                        <div id="recommendedPalettes" class="palette-grid">
+                            <!-- 推荐配色将通过JavaScript生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 文章详情视图 -->
+    <div id="detailView" class="hidden">
+        <!-- 面包屑导航 -->
+        <div class="breadcrumb border-b border-theme">
+            <div class="px-4 md:px-8 py-4">
+                <nav class="flex flex-wrap" aria-label="Breadcrumb">
+                    <ol class="flex items-center space-x-2 text-sm">
+                        <li>
+                            <button onclick="backToMain()" class="text-theme-secondary hover:text-theme-primary transition-colors">配色库</button>
+                        </li>
+                        <li>
+                            <svg class="w-4 h-4 text-theme-tertiary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </li>
+                        <li>
+                            <span id="breadcrumbField" class="text-theme-secondary">生物学</span>
+                        </li>
+                        <li>
+                            <svg class="w-4 h-4 text-theme-tertiary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </li>
+                        <li>
+                            <span id="breadcrumbJournal" class="text-theme-secondary">Nature</span>
+                        </li>
+                        <li>
+                            <svg class="w-4 h-4 text-theme-tertiary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </li>
+                        <li class="max-w-sm">
+                            <span id="breadcrumbTitle" class="text-theme-primary font-medium truncate">Single-cell RNA sequencing reveals cellular heterogeneity...</span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- 详情内容 -->
+        <div class="p-4 md:p-8 pt-6">
+            <div class="max-w-6xl mx-auto">
+                <!-- 文章信息卡片 -->
+                <div id="articleInfoCard" class="bg-theme-primary rounded-2xl shadow-lg p-4 md:p-8 mb-8 slide-in">
+                    <!-- 内容将通过JavaScript动态生成 -->
+                </div>
+
+                <!-- 图表配色展示 -->
+                <div id="figuresGrid" class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                    <!-- 图表配色卡片将通过JavaScript动态生成 -->
+                </div>
+
+                <!-- 完整颜色信息表 -->
+                <div class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in" style="animation-delay: 0.4s;">
+                    <h3 class="text-lg font-bold text-theme-primary mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        完整颜色信息表
+                    </h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm" id="colorInfoTable">
+                            <!-- 表格内容将通过JavaScript动态生成 -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 文章编辑视图 -->
+    <div id="editorView" class="hidden">
+        <div class="main-content-full centered-container">
+            <div class="p-8">
+                <div class="max-w-5xl mx-auto">
+                    <!-- 编辑器标题 -->
+                    <div class="bg-theme-primary rounded-2xl shadow-lg p-6 mb-8 slide-in">
+                        <h2 class="text-2xl font-bold gradient-text mb-2">添加新文章</h2>
+                        <p class="text-theme-secondary">录入学术文章的配色信息和图表数据</p>
+                    </div>
+
+                    <!-- 文章编辑表单 -->
+                    <div class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in" style="animation-delay: 0.1s;">
+                        <form id="articleForm" onsubmit="articleEditor.submitForm(event)">
+                            <!-- 基本信息 -->
+                            <div class="mb-8">
+                                <h3 class="text-lg font-bold text-theme-primary mb-4 flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                    基本信息
+                                </h3>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <!-- 研究领域 -->
+                                    <div>
+                                        <label class="block text-sm font-medium text-theme-secondary mb-2">研究领域 *</label>
+                                        <div class="flex space-x-2">
+                                            <select id="fieldSelect" required class="flex-1 p-3 border border-theme rounded-lg bg-theme-primary text-theme-primary focus:ring-2 focus:ring-blue-500">
+                                                <option value="">请选择研究领域</option>
+                                            </select>
+                                            <button type="button" onclick="articleEditor.showAddFieldModal()" 
+                                                    class="px-3 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors" title="添加新领域">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- 期刊 -->
+                                    <div>
+                                        <label class="block text-sm font-medium text-theme-secondary mb-2">期刊 *</label>
+                                        <div class="flex space-x-2">
+                                            <select id="journalSelect" required class="flex-1 p-3 border border-theme rounded-lg bg-theme-primary text-theme-primary focus:ring-2 focus:ring-blue-500">
+                                                <option value="">请先选择研究领域</option>
+                                            </select>
+                                            <button type="button" onclick="articleEditor.showAddJournalModal()" 
+                                                    class="px-3 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors" title="添加新期刊">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- 发表年份 -->
+                                    <div>
+                                        <label class="block text-sm font-medium text-theme-secondary mb-2">发表年份 *</label>
+                                        <select id="yearSelect" required class="w-full p-3 border border-theme rounded-lg bg-theme-primary text-theme-primary focus:ring-2 focus:ring-blue-500">
+                                            <option value="">请选择年份</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- DOI -->
+                                    <div>
+                                        <label class="block text-sm font-medium text-theme-secondary mb-2">DOI *</label>
+                                        <input type="text" id="doiInput" required placeholder="10.1038/s41586-2024-xxxxx" 
+                                               class="w-full p-3 border border-theme rounded-lg bg-theme-primary text-theme-primary focus:ring-2 focus:ring-blue-500">
+                                    </div>
+                                </div>
+
+                                <!-- 文章标题 -->
+                                <div class="mt-6">
+                                    <label class="block text-sm font-medium text-theme-secondary mb-2">文章标题 *</label>
+                                    <input type="text" id="titleInput" required placeholder="请输入完整的文章标题" 
+                                           class="w-full p-3 border border-theme rounded-lg bg-theme-primary text-theme-primary focus:ring-2 focus:ring-blue-500">
+                                </div>
+
+                                <!-- 作者 -->
+                                <div class="mt-6">
+                                    <label class="block text-sm font-medium text-theme-secondary mb-2">作者 *</label>
+                                    <input type="text" id="authorsInput" required placeholder="Smith, J., Johnson, A., Williams, M." 
+                                           class="w-full p-3 border border-theme rounded-lg bg-theme-primary text-theme-primary focus:ring-2 focus:ring-blue-500">
+                                    <p class="text-xs text-theme-tertiary mt-1">按期刊格式输入，用逗号分隔</p>
+                                </div>
+
+                                <!-- 标签 -->
+                                <div class="mt-6">
+                                    <label class="block text-sm font-medium text-theme-secondary mb-2">研究标签</label>
+                                    <input type="text" id="tagsInput" placeholder="single-cell, RNA-seq, development" 
+                                           class="w-full p-3 border border-theme rounded-lg bg-theme-primary text-theme-primary focus:ring-2 focus:ring-blue-500">
+                                    <p class="text-xs text-theme-tertiary mt-1">用逗号分隔多个标签，有助于搜索和分类</p>
+                                </div>
+                            </div>
+
+                            <!-- 图表配色 -->
+                            <div class="mb-8">
+                                <div class="flex items-center justify-between mb-6">
+                                    <h3 class="text-lg font-bold text-theme-primary flex items-center">
+                                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                            <polyline points="21,15 16,10 5,21"></polyline>
+                                        </svg>
+                                        图表配色
+                                    </h3>
+                                    <button type="button" onclick="articleEditor.addFigure()" 
+                                            class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors flex items-center">
+                                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                        </svg>
+                                        添加图表
+                                    </button>
+                                </div>
+                                <div id="figuresContainer">
+                                    <!-- 图表将动态添加到这里 -->
+                                </div>
+                            </div>
+
+                            <!-- 提交按钮 -->
+                            <div class="flex justify-between items-center pt-6 border-t border-theme">
+                                <button type="button" onclick="articleEditor.resetForm()" 
+                                        class="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors">
+                                    重置表单
+                                </button>
+                                <div class="flex space-x-4">
+                                    <button type="button" onclick="articleEditor.previewArticle()" 
+                                            class="px-6 py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors">
+                                        预览文章
+                                    </button>
+                                    <button type="submit" 
+                                            class="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">
+                                        保存文章
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加领域模态框 -->
+    <div id="addFieldModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-theme-primary rounded-2xl p-6 w-full max-w-md mx-4">
+            <h3 class="text-lg font-bold text-theme-primary mb-4">添加新研究领域</h3>
+            <form onsubmit="articleEditor.addNewField(event)">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-theme-secondary mb-2">领域名称 *</label>
+                    <input type="text" id="newFieldName" required placeholder="例：人工智能" 
+                           class="w-full p-3 border border-theme rounded-lg bg-theme-primary text-theme-primary">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-theme-secondary mb-2">领域图标</label>
+                    <input type="text" id="newFieldIcon" placeholder="🤖" 
+                           class="w-full p-3 border border-theme rounded-lg bg-theme-primary text-theme-primary">
+                    <p class="text-xs text-theme-tertiary mt-1">输入一个表情符号作为图标</p>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-theme-secondary mb-2">领域描述</label>
+                    <textarea id="newFieldDescription" placeholder="简要描述该研究领域..." 
+                              class="w-full p-3 border border-theme rounded-lg bg-theme-primary text-theme-primary h-20 resize-none"></textarea>
+                </div>
+                <div class="flex justify-end space-x-3">
+                    <button type="button" onclick="articleEditor.closeAddFieldModal()" 
+                            class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors">
+                        取消
+                    </button>
+                    <button type="submit" 
+                            class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                        添加
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 添加期刊模态框 -->
+    <div id="addJournalModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-theme-primary rounded-2xl p-6 w-full max-w-md mx-4">
+            <h3 class="text-lg font-bold text-theme-primary mb-4">添加新期刊</h3>
+            <form onsubmit="articleEditor.addNewJournal(event)">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-theme-secondary mb-2">期刊名称 *</label>
+                    <input type="text" id="newJournalName" required placeholder="例：Nature Machine Intelligence" 
+                           class="w-full p-3 border border-theme rounded-lg bg-theme-primary text-theme-primary">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-theme-secondary mb-2">所属领域 *</label>
+                    <select id="newJournalField" required class="w-full p-3 border border-theme rounded-lg bg-theme-primary text-theme-primary">
+                        <option value="">请选择领域</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-theme-secondary mb-2">期刊颜色</label>
+                    <div class="flex space-x-2">
+                        <input type="color" id="newJournalColor" value="#2563eb" 
+                               class="w-16 h-12 border border-theme rounded-lg cursor-pointer">
+                        <input type="text" id="newJournalColorText" value="#2563eb" 
+                               class="flex-1 p-3 border border-theme rounded-lg bg-theme-primary text-theme-primary font-mono text-sm">
+                    </div>
+                </div>
+                <div class="flex justify-end space-x-3">
+                    <button type="button" onclick="articleEditor.closeAddJournalModal()" 
+                            class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors">
+                        取消
+                    </button>
+                    <button type="submit" 
+                            class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                        添加
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 配色选择菜单 -->
+    <div id="colorContextMenu" class="color-context-menu">
+        <button onclick="copyColorHex()">复制 HEX 值</button>
+        <button onclick="copyColorRgb()">复制 RGB 值</button>
+        <button onclick="copyColorName()">复制颜色名称</button>
+    </div>
+
+    <!-- 复制成功提示 -->
+    <div id="copyToast" class="fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+        <div class="flex items-center space-x-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span id="copyToastText">颜色已复制到剪贴板</span>
+        </div>
+    </div>
+
+    <!-- JavaScript模块 -->
+    <script src="js/data-manager.js"></script>
+    <script src="js/color-utils.js"></script>
+    <script src="js/ui-components.js"></script>
+    <script src="js/preview-tool.js"></script>
+    <script src="js/my-palettes.js"></script>
+    <script src="js/article-detail.js"></script>
+    <script src="js/article-editor.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
