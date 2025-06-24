@@ -517,7 +517,7 @@
         "name": "Fig. 2 - 当前密度图",
         "description": "混合物、DCPY2和DCPY2 (5% DIO)的J-V特性",
         "figure_type": "line_plot",
-        "image_path": "data/images/article_8_fig_1.png",
+        "image_path": "data/images/article_8_fig_1.jpg",
         "colors": [
           {
             "hex": "#c6c8c9",
