@@ -47,7 +47,7 @@
         "id": "fig_1_2",
         "name": "Fig. 4: Comparison of the niche area",
         "description": "生态位面积的比较",
-        "figure_type": "折线图",
+        "figure_type": "line_plot",
         "image_path": "data/images/article_1_fig_2.jpg",
         "colors": [
           {
@@ -372,6 +372,170 @@
             "rgb": "rgb(228, 128, 120)",
             "name": "Fees",
             "usage": "罚款禁令"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "journal": "cell",
+    "year": 2025,
+    "field": "natural_science",
+    "subfield": "biology",
+    "title": "Serotonin transporter inhibits antitumor immunity through regulating the intratumoral serotonin axis",
+    "authors": "Bo Li, James Elsten-Brown, Miao Li",
+    "doi": "10.1016/j.cell.2025.04.032",
+    "tags": ["Serotonin Transporter", "Immune Regulation", "Antitumor Immunity"],
+    "figures": [
+      {
+        "id": "fig_7_1",
+        "name": "Figure 2B - 免疫细胞的scRNA-seq分析",
+        "description": "提出了组合的均匀流形近似和投影(UMAP)图，显示了九个主要细胞群的形成。",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_7_fig_1.png",
+        "colors": [
+          {
+            "hex": "#fa756e",
+            "rgb": "rgb(250,117,110)",
+            "name": "B cells",
+            "usage": "B细胞"
+          },
+          {
+            "hex": "#d68e04",
+            "rgb": "rgb(214,142,4)",
+            "name": "CD8 T cells",
+            "usage": "CD8T细胞"
+          },
+          {
+            "hex": "#93a906",
+            "rgb": "rgb(147,169,6)",
+            "name": "DCs",
+            "usage": "树突状细胞"
+          },
+          {
+            "hex": "#13bb38",
+            "rgb": "rgb(19,187,56)",
+            "name": "Mast cells",
+            "usage": "肥大细胞"
+          },
+          {
+            "hex": "#05c1a2",
+            "rgb": "rgb(5,193,162)",
+            "name": "Granulocytes",
+            "usage": "粒细胞"
+          },
+          {
+            "hex": "#0eb9e4",
+            "rgb": "rgb(14,185,228)",
+            "name": "Mono/TAMs",
+            "usage": "单核/血小板"
+          },
+          {
+            "hex": "#639dfc",
+            "rgb": "rgb(99,157,252)",
+            "name": "NK cells",
+            "usage": "NK细胞"
+          },
+          {
+            "hex": "#db70fe",
+            "rgb": "rgb(219,112,254)",
+            "name": "Th cells",
+            "usage": "T辅助细胞"
+          }
+        ]
+      },
+      {
+        "id": "fig_7_2",
+        "name": "Figure 2C - 组合UMAP图",
+        "description": "显示三个主要细胞群形成的组合UMAP图",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_7_fig_2.png",
+        "colors": [
+          {
+            "hex": "#578dd7",
+            "rgb": "rgb(87,141,215)",
+            "name": "Effector/proliferating CD8 T cells",
+            "usage": "效应/增殖的CD8 T细胞"
+          },
+          {
+            "hex": "#fd4e4e",
+            "rgb": "rgb(253,78,78)",
+            "name": "Progenitor exhausted CD8 T cells",
+            "usage": "祖细胞耗尽的CD8 T细胞"
+          },
+          {
+            "hex": "#00af52",
+            "rgb": "rgb(0,175,82)",
+            "name": "Terminally exhausted CD8 T cells",
+            "usage": "终末耗尽的CD8 T细胞"
+          }
+        ]
+      },
+      {
+        "id": "fig_7_3",
+        "name": "Figure 4J - mRNA表达量图",
+        "description": "效应基因的RT-qPCR分析",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_7_fig_3.png",
+        "colors": [
+          {
+            "hex": "#323232",
+            "rgb": "rgb(50,50,50)",
+            "name": "NT",
+            "usage": "未处理"
+          },
+          {
+            "hex": "#0101f7",
+            "rgb": "rgb(0,0,254)",
+            "name": "CIT",
+            "usage": "存在或不存在SSRI (CIT或FLX)治疗"
+          },
+          {
+            "hex": "#fe0000",
+            "rgb": "rgb(254,0,0)",
+            "name": "FLX",
+            "usage": "存在或不存在SSRI (CIT或FLX)治疗"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "journal": "advanced_materials",
+    "year": 2024,
+    "field": "engineering_technology",
+    "subfield": "mechanical_engineering",
+    "title": "Molecular Control of the Donor/Acceptor Interface Suppresses Charge Recombination Enabling High-Efficiency Single-Component Organic Solar Cells",
+    "authors": "Yao Li, Richard A. Pacalaj, Yongmin Luo, Keren Ai, Yulong Hai, Shijie Liang, Kezhou Fan",
+    "doi": "10.1002/adma.202409212",
+    "tags": ["Organic Solar Cells", "Molecular Control", "Charge Recombination", "Donor/Acceptor Interface"],
+    "figures": [
+      {
+        "id": "fig_8_1",
+        "name": "Fig. 2 - 当前密度图",
+        "description": "混合物、DCPY2和DCPY2 (5% DIO)的J-V特性",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_8_fig_1.png",
+        "colors": [
+          {
+            "hex": "#c6c8c9",
+            "rgb": "rgb(198,200,201)",
+            "name": "Blend",
+            "usage": "混合物"
+          },
+          {
+            "hex": "#7da2c6",
+            "rgb": "rgb(125,162,198)",
+            "name": "DCPY2",
+            "usage": "DCPY2"
+          },
+          {
+            "hex": "#ce8487",
+            "rgb": "rgb(206,132,135)",
+            "name": "DCPY2 (5% DIO)",
+            "usage": "DCPY2 (5% DIO)"
           }
         ]
       }
