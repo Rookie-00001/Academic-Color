@@ -334,39 +334,156 @@
                                 <!-- 颜色选择器将通过JavaScript生成 -->
                             </div>
                         </div>
+
+                        <!-- 图表选择器 -->
+                        <div class="mt-6">
+                            <label class="block text-sm font-medium text-theme-secondary mb-3">选择要预览的图表类型</label>
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" checked onchange="previewTool.toggleChart('lineChart')" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="text-sm text-theme-primary">折线图</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" checked onchange="previewTool.toggleChart('scatterChart')" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="text-sm text-theme-primary">散点图</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" checked onchange="previewTool.toggleChart('barChart')" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="text-sm text-theme-primary">柱状图</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" checked onchange="previewTool.toggleChart('pieChart')" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="text-sm text-theme-primary">饼图</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" onchange="previewTool.toggleChart('sankeyChart')" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="text-sm text-theme-primary">桑基图</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" onchange="previewTool.toggleChart('violinChart')" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="text-sm text-theme-primary">小提琴图</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" onchange="previewTool.toggleChart('areaChart')" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="text-sm text-theme-primary">面积图</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" onchange="previewTool.toggleChart('densityChart')" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="text-sm text-theme-primary">密度图</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" onchange="previewTool.toggleChart('ridgelineChart')" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="text-sm text-theme-primary">山脊图</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" onchange="previewTool.toggleChart('boxChart')" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="text-sm text-theme-primary">箱型图</span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- 图表预览 -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        <!-- 折线图 -->
-                        <div class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in" style="animation-delay: 0.1s;">
-                            <h4 class="text-lg font-semibold text-theme-primary mb-4">折线图</h4>
+                    <!-- 图表预览区域 -->
+                    <div id="chartsContainer" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- 默认图表 -->
+                        <div id="lineChartContainer" class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in" style="animation-delay: 0.1s;">
+                            <div class="mb-4">
+                                <h4 class="text-lg font-semibold text-theme-primary mb-2">折线图</h4>
+                                <p class="text-xs text-theme-secondary">用于展示数据随时间或其他连续变量的变化趋势</p>
+                            </div>
                             <div class="chart-container">
                                 <canvas id="lineChart"></canvas>
                             </div>
                         </div>
 
-                        <!-- 散点图 -->
-                        <div class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in" style="animation-delay: 0.2s;">
-                            <h4 class="text-lg font-semibold text-theme-primary mb-4">散点图</h4>
+                        <div id="scatterChartContainer" class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in" style="animation-delay: 0.2s;">
+                            <div class="mb-4">
+                                <h4 class="text-lg font-semibold text-theme-primary mb-2">散点图</h4>
+                                <p class="text-xs text-theme-secondary">用于展示两个变量之间的相关关系和数据分布</p>
+                            </div>
                             <div class="chart-container">
                                 <canvas id="scatterChart"></canvas>
                             </div>
                         </div>
 
-                        <!-- 柱状图 -->
-                        <div class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in" style="animation-delay: 0.3s;">
-                            <h4 class="text-lg font-semibold text-theme-primary mb-4">柱状图</h4>
+                        <div id="barChartContainer" class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in" style="animation-delay: 0.3s;">
+                            <div class="mb-4">
+                                <h4 class="text-lg font-semibold text-theme-primary mb-2">柱状图</h4>
+                                <p class="text-xs text-theme-secondary">用于比较不同类别的数值大小</p>
+                            </div>
                             <div class="chart-container">
                                 <canvas id="barChart"></canvas>
                             </div>
                         </div>
 
-                        <!-- 饼图 -->
-                        <div class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in" style="animation-delay: 0.4s;">
-                            <h4 class="text-lg font-semibold text-theme-primary mb-4">饼图</h4>
+                        <div id="pieChartContainer" class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in" style="animation-delay: 0.4s;">
+                            <div class="mb-4">
+                                <h4 class="text-lg font-semibold text-theme-primary mb-2">饼图</h4>
+                                <p class="text-xs text-theme-secondary">用于展示各部分占整体的比例关系</p>
+                            </div>
                             <div class="chart-container">
                                 <canvas id="pieChart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- 额外图表容器（初始隐藏） -->
+                        <div id="sankeyChartContainer" class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in hidden">
+                            <div class="mb-4">
+                                <h4 class="text-lg font-semibold text-theme-primary mb-2">桑基图</h4>
+                                <p class="text-xs text-theme-secondary">展现数据流动的利器，边的宽度与流量成比例显示</p>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="sankeyChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div id="violinChartContainer" class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in hidden">
+                            <div class="mb-4">
+                                <h4 class="text-lg font-semibold text-theme-primary mb-2">小提琴图</h4>
+                                <p class="text-xs text-theme-secondary">结合箱型图和核密度图，展示数据分布和密度估计</p>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="violinChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div id="areaChartContainer" class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in hidden">
+                            <div class="mb-4">
+                                <h4 class="text-lg font-semibold text-theme-primary mb-2">面积图</h4>
+                                <p class="text-xs text-theme-secondary">通过填充区域表示数据大小，展示变化趋势</p>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="areaChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div id="densityChartContainer" class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in hidden">
+                            <div class="mb-4">
+                                <h4 class="text-lg font-semibold text-theme-primary mb-2">密度图</h4>
+                                <p class="text-xs text-theme-secondary">通过曲线展示连续变量的密度分布情况</p>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="densityChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div id="ridgelineChartContainer" class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in hidden">
+                            <div class="mb-4">
+                                <h4 class="text-lg font-semibold text-theme-primary mb-2">山脊图</h4>
+                                <p class="text-xs text-theme-secondary">多个密度曲线堆叠，形成山脊状分布图</p>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="ridgelineChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div id="boxChartContainer" class="bg-theme-primary rounded-2xl shadow-lg p-6 slide-in hidden">
+                            <div class="mb-4">
+                                <h4 class="text-lg font-semibold text-theme-primary mb-2">箱型图</h4>
+                                <p class="text-xs text-theme-secondary">展示数据的四分位数、中位数和离群值</p>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="boxChart"></canvas>
                             </div>
                         </div>
                     </div>
@@ -748,5 +865,16 @@
     <script src="js/article-detail.js"></script>
     <script src="js/article-editor.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- 功能不可用提示函数 -->
+    <script>
+        function showFeatureNotAvailable(featureName) {
+            if (window.uiComponents) {
+                uiComponents.showCopyToast(`${featureName} 功能暂未开放，敬请期待！`);
+            } else {
+                alert(`${featureName} 功能暂未开放，敬请期待！`);
+            }
+        }
+    </script>
 </body>
 </html>
