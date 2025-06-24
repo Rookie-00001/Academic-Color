@@ -492,11 +492,13 @@ class UIComponents {
     updateFilterButtons(className, activeValue) {
         const buttons = document.querySelectorAll(`.${className}`);
         buttons.forEach(btn => {
-            const value = btn.dataset.field || 
-                          (btn.dataset.field && btn.dataset.subfield ? `${btn.dataset.field}.${btn.dataset.subfield}` : '') ||
-                          btn.dataset.journal || 
-                          btn.dataset.year || 
-                          btn.dataset.count;
+            let value;
+            if (btn.dataset.field && btn.dataset.subfield) {
+                value = `${btn.dataset.field}.${btn.dataset.subfield}`;
+            } else {
+                value = btn.dataset.field || btn.dataset.journal ||
+                        btn.dataset.year || btn.dataset.count;
+            }
                           
             if (value === activeValue) {
                 if (className === 'field-filter' || className === 'journal-filter' || className === 'subfield-filter') {
