@@ -131,8 +131,8 @@
     "field": "interdisciplinary",
     "subfield": "bioinformatics"
   },
-  "bioinformatics": {
-    "name": "Bioinformatics",
+  "nucleic_acids_res": {
+    "name": "Nucleic Acids Research",
     "color": "#3b82f6",
     "field": "interdisciplinary",
     "subfield": "bioinformatics"
