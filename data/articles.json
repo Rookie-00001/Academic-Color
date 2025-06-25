@@ -540,5 +540,233 @@
         ]
       }
     ]
+  },
+  {
+    "id": 9,
+    "journal": "climate_change",
+    "year": 2025,
+    "field": "interdisciplinary",
+    "subfield": "environmental_science",
+    "title": "Future climate-driven fires may boost ocean productivity in the iron-limited North Atlantic",
+    "authors": "Bergas-Masso, E., Hamilton, D.S., Myriokefalitakis, S.",
+    "doi": "10.1038/s41558-025-02356-4",
+    "tags": ["Atmospheric chemistry", "Biogeochemistry", "Climate and Earth system modelling"],
+    "figures": [
+      {
+        "id": "fig_9_1",
+        "name": "Figure 1 - 铁排放和海拔的关系图",
+        "description": "未来火铁排放的变化",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_9_fig_1.png",
+        "colors": [
+          {
+            "hex": "#88bb9a",
+            "rgb": "rgb(134,187,154)",
+            "name": "Future climate-driven fires",
+            "usage": "未来气候驱动的火灾"
+          },
+          {
+            "hex": "#c591a9",
+            "rgb": "rgb(197,145,169)",
+            "name": "Future anthropogenic fires",
+            "usage": "未来的人为火灾"
+          },
+          {
+            "hex": "#818181",
+            "rgb": "rgb(129,129,129)",
+            "name": "Present day",
+            "usage": "现在"
+          }
+        ]
+      },
+      {
+        "id": "fig_9_2",
+        "name": "Figure 4 - NPP变化比较图",
+        "description": "未来大气铁诱导的NPP变化与现在的比较",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_9_fig_2.png",
+        "colors": [
+          {
+            "hex": "#004589",
+            "rgb": "rgb(0,69,137)",
+            "name": "Fe limitation at 8μM surface nitrate",
+            "usage": "在硝酸盐表面浓度下的限制"
+          },
+          {
+            "hex": "#bb5765",
+            "rgb": "rgb(187,87,101)",
+            "name": "1.5 x10° g C per g SFe",
+            "usage": "单位表示"
+          },
+          {
+            "hex": "#c6e6f7",
+            "rgb": "rgb(198,230,247)",
+            "name": "Fe from other sources",
+            "usage": "其他来源铁"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "journal": "nature_methods",
+    "year": 2025,
+    "field": "interdisciplinary",
+    "subfield": "bioinformatics",
+    "title": "scNET: learning context-specific gene and cell embeddings by integrating single-cell gene expression data with protein–protein interactions",
+    "authors": "Sheinin, R., Sharan, R. & Madi, A. ",
+    "doi": "10.1038/s41592-025-02627-0",
+    "tags": ["Cellular signalling networks", "Computational platforms and environments", "Machine learning"],
+    "figures": [
+      {
+        "id": "fig_10_1",
+        "name": "Figure 1 - 网络评估图",
+        "description": "使用疟疾相关B细胞数据集的共嵌入网络评估",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_10_fig_1.png",
+        "colors": [
+          {
+            "hex": "#1bb5b9",
+            "rgb": "rgb(27,181,185)",
+            "name": "scNET",
+            "usage": "scNET"
+          },
+          {
+            "hex": "#eea78b",
+            "rgb": "rgb(238,167,139)",
+            "name": "Counts",
+            "usage": "Counts"
+          },
+          {
+            "hex": "#d5c1d6",
+            "rgb": "rgb(213,193,214)",
+            "name": "PPI",
+            "usage": "PPI"
+          },
+          {
+            "hex": "#9566a8",
+            "rgb": "rgb(149,102,168)",
+            "name": "Oxidative phosphorylation",
+            "usage": "氧化磷酸化"
+          },
+          {
+            "hex": "#a4d2a1",
+            "rgb": "rgb(164,210,161)",
+            "name": "Spliceosome",
+            "usage": "剪接体"
+          },
+          {
+            "hex": "#e98d49",
+            "rgb": "rgb(233,141,73)",
+            "name": "Intestinal immune network for lgA production",
+            "usage": "肠道免疫网络"
+          },
+          {
+            "hex": "#ebcc75",
+            "rgb": "rgb(235,204,117)",
+            "name": "Proteasome",
+            "usage": "蛋白酶"
+          },
+          {
+            "hex": "#489faa",
+            "rgb": "rgb(72,159,170)",
+            "name": "DEEP IMPUTE",
+            "usage": "深度输入"
+          }
+        ]
+      },
+      {
+        "id": "fig_10_2",
+        "name": "Extended Data Figure 2 - 与Pdcd1关联的基因图",
+        "description": "显示了与共抑制受体 Pdcd1 （PD-1） 相关的传播得分最高的前 30 个基因。",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_10_fig_2.png",
+        "colors": [
+          {
+            "hex": "#028104",
+            "rgb": "rgb(2,129,4)",
+            "name": "Cytokine Receptors and Signaling",
+            "usage": "细胞因子受体和信号传导"
+          },
+          {
+            "hex": "#fda700",
+            "rgb": "rgb(253,167,0)",
+            "name": "Metabolism and Cell Cycle",
+            "usage": "代谢和细胞周期"
+          },
+          {
+            "hex": "#fe0101",
+            "rgb": "rgb(254,1,1)",
+            "name": "Immune Checkpoint and Co-stimulation Molecules",
+            "usage": "免疫检查点和共刺激分子"
+          },
+          {
+            "hex": "#0101ff",
+            "rgb": "rgb(1,1,255)",
+            "name": "Apoptosis and Cell Death Regulation",
+            "usage": "细胞凋亡和细胞死亡调控"
+          },
+          {
+            "hex": "#820080",
+            "rgb": "rgb(130,0,128)",
+            "name": "Other Functional Categories",
+            "usage": "其他功能类别"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "journal": "nucleic_acids_res",
+    "year": 2025,
+    "field": "interdisciplinary",
+    "subfield": "bioinformatics",
+    "title": "Deep learning-based cell-specific gene regulatory networks inferred from single-cell multiome data",
+    "authors": "Junlin Xu , Changcheng Lu , Shuting Jin , Yajie Meng , Xiangzheng Fu , Xiangxiang Zeng",
+    "doi": "10.1093/nar/gkaf138",
+    "tags": ["Deep learning", "gene regulatory network", "single-cell multiome"],
+    "figures": [
+      {
+        "id": "fig_11_1",
+        "name": "Figure 3 - 模型组学特征影响图",
+        "description": "不同组学特征对基于淋巴细胞的模型性能的影响",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_11_fig_1.jpg",
+        "colors": [
+          {
+            "hex": "#9a4e96",
+            "rgb": "rgb(154,78,150)",
+            "name": "ATAC+scRNA feature",
+            "usage": "ATAC+scRNA feature"
+          },
+          {
+            "hex": "#38a6a5",
+            "rgb": "rgb(56,166,165)",
+            "name": "ATAC feature",
+            "usage": "ATAC feature"
+          },
+          {
+            "hex": "#1c6995",
+            "rgb": "rgb(28,105,149)",
+            "name": "scRNA feature",
+            "usage": "scRNA feature"
+          },
+          {
+            "hex": "#7eb9da",
+            "rgb": "rgb(126,185,218)",
+            "name": "Positive score",
+            "usage": "Positive score"
+          },
+          {
+            "hex": "#80ceb9",
+            "rgb": "rgb(128,206,185)",
+            "name": "Negative score",
+            "usage": "Negative score"
+          }
+        ]
+      }
+    ]
   }
 ]
