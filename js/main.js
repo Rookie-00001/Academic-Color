@@ -270,6 +270,14 @@ class NavigationManager {
     }
 }
 
+// 年份筛选函数 - 修复高亮问题
+function filterByYear(year) {
+    // 直接调用uiComponents的方法，不需要重复的高亮逻辑
+    if (window.uiComponents && typeof uiComponents.filterByYear === 'function') {
+        uiComponents.filterByYear(year);
+    }
+}
+
 // 创建应用实例
 const app = new AcademicColorApp();
 
