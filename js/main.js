@@ -211,9 +211,29 @@ class NavigationManager {
         }
     }
 
+    // 显示取色器视图
+    showColorPickerView() {
+        if (this.currentView !== 'colorPicker') {
+            this.viewHistory.push(this.currentView);
+            this.updateBackButton();
+        }
+        
+        this.currentView = 'colorPicker';
+        this.hideAllViews();
+        const colorPickerView = document.getElementById('colorPickerView');
+        if (colorPickerView) {
+            colorPickerView.classList.remove('hidden');
+            
+            // 初始化取色器工具
+            if (window.colorPickerTool && !colorPickerTool.canvas) {
+                colorPickerTool.init();
+            }
+        }
+    }
+
     // 隐藏所有视图
     hideAllViews() {
-        const views = ['mainView', 'previewView', 'myPalettesView', 'detailView', 'editorView'];
+        const views = ['mainView', 'previewView', 'myPalettesView', 'detailView', 'editorView', 'colorPickerView'];
         views.forEach(viewId => {
             const view = document.getElementById(viewId);
             if (view) view.classList.add('hidden');
@@ -241,6 +261,9 @@ class NavigationManager {
                     break;
                 case 'editor':
                     this.showEditorView();
+                    break;
+                case 'colorPicker':
+                    this.showColorPickerView();
                     break;
             }
         }
@@ -306,6 +329,12 @@ function showMyPalettes() {
     }
 }
 
+function showColorPicker() {
+    if (window.navigationManager) {
+        navigationManager.showColorPickerView();
+    }
+}
+
 function backToMain() {
     if (window.navigationManager) {
         navigationManager.showMainView();
@@ -335,3 +364,4 @@ window.myPalettes = myPalettes;
 window.articleDetail = articleDetail;
 window.articleEditor = articleEditor;
 window.ColorUtils = ColorUtils;
+window.colorPickerTool = colorPickerTool;
