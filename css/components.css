@@ -460,3 +460,56 @@
 .figures-grid-multiple img {
     max-height: 300px;
 }
+
+/* 筛选器样式优化 */
+.collapsible.expanded {
+    display: block;
+    opacity: 1;
+    max-height: none;
+    transition: all 0.3s ease;
+}
+
+.collapsible.collapsed {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.3s ease;
+}
+
+/* 年份和配色数量筛选按钮样式 */
+.year-filter {
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.color-count-filter {
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.year-filter:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.color-count-filter:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 确保按钮可点击 */
+.year-filter,
+.color-count-filter {
+    pointer-events: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* 活跃状态样式 */
+.year-filter:active,
+.color-count-filter:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
