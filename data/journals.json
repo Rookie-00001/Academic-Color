@@ -101,6 +101,12 @@
     "field": "medical_life_science",
     "subfield": "clinical_medicine"
   },
+  "radiology": {
+    "name": "Radiology",
+    "color": "#4a808c",
+    "field": "medical_life_science",
+    "subfield": "clinical_medicine"
+  },
   "nature_medicine": {
     "name": "Nature Medicine",
     "color": "#c2410c",
