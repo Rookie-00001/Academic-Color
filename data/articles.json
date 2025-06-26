@@ -768,5 +768,51 @@
         ]
       }
     ]
+  },
+  {
+    "id": 12,
+    "journal": "radiology",
+    "year": 2023,
+    "field": "medical_life_science",
+    "subfield": "clinical_medicine",
+    "title": "Routine 4D Cardiac CT to Identify Concomitant Transthyretin Amyloid Cardiomyopathy in Older Adults with Severe Aortic Stenosis",
+    "authors": "Benedikt Bernhard, Zoe Leib, Stephan Dobner, Caglayan Demirel, Federico Caobelli, ",
+    "doi": "10.1148/radiol.230425",
+    "tags": ["4D Cardiac CT", "Severe Aortic Stenosis", "Transthyretin Amyloid Cardiomyopathy", "Diagnostic Imaging"],
+    "figures": [
+      {
+        "id": "fig_12_1",
+        "name": "Figure 3 - 诊断准确性图",
+        "description": "预测ATTR-CM存在诊断准确性-个体参数",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_12_fig_1.jpg",
+        "colors": [
+          {
+            "hex": "#0b2570",
+            "rgb": "rgb(154,78,150)",
+            "name": "LV GLS",
+            "usage": "LV GLS"
+          },
+          {
+            "hex": "#459741",
+            "rgb": "rgb(69,151,65)",
+            "name": "LV mass index",
+            "usage": "LV 质量指数"
+          },
+          {
+            "hex": "#d0c988",
+            "rgb": "rgb(208,201,136)",
+            "name": "LA GLS",
+            "usage": "LA GLS"
+          },
+          {
+            "hex": "#d6022c",
+            "rgb": "rgb(214,2,44)",
+            "name": "Relative apical LS",
+            "usage": "相对心尖 LS"
+          }
+        ]
+      }
+    ]
   }
 ]
