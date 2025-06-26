@@ -457,7 +457,20 @@ class UIComponents {
     filterByYear(year) {
         this.currentFilters.year = year;
         this.yearRange = null; // 清除年份范围
-        this.updateFilterButtons('year-filter', year);
+        
+        // 手动更新年份按钮高亮状态
+        document.querySelectorAll('.year-filter').forEach(btn => {
+            btn.classList.remove('bg-blue-500', 'text-white');
+            btn.classList.add('bg-theme-tertiary', 'text-theme-primary', 'hover:bg-theme-secondary');
+        });
+        
+        // 高亮当前选中的年份按钮
+        const activeBtn = document.querySelector(`[data-year="${year}"]`);
+        if (activeBtn) {
+            activeBtn.classList.remove('bg-theme-tertiary', 'text-theme-primary', 'hover:bg-theme-secondary');
+            activeBtn.classList.add('bg-blue-500', 'text-white');
+        }
+        
         this.renderArticles();
     }
 
