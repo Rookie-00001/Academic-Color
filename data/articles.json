@@ -831,7 +831,7 @@
         "name": "Figure 3a - 保真度误差图",
         "description": "系统中STIRAP型绝热态转移的保真度误差，作为绝热参数𝜈/𝐺0的函数",
         "figure_type": "line_plot",
-        "image_path": "data/images/article_13_fig_1.jpg",
+        "image_path": "data/images/article_13_fig_1.png",
         "colors": [
           {
             "hex": "#4b4b4b",
@@ -864,7 +864,7 @@
         "name": "Figure 3b - 泵脉冲曲线图",
         "description": "通过二阶马格努斯算法预测的修正泵浦脉冲𝐺p⁡(𝑡)作为不同𝜈/𝐺0值的𝑡/𝑡f的函数",
         "figure_type": "line_plot",
-        "image_path": "data/images/article_13_fig_2.jpg",
+        "image_path": "data/images/article_13_fig_2.png",
         "colors": [
           {
             "hex": "#9240b6",
