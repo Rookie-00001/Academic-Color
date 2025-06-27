@@ -893,5 +893,57 @@
         ]
       }
     ]
+  },
+  {
+    "id": 14,
+    "journal": "stroke",
+    "year": 2025,
+    "field": "medical_life_science",
+    "subfield": "clinical_medicine",
+    "title": "Postacute Discharge Destination and Major Adverse Cardiovascular Events Among Patients With Intracerebral Hemorrhage",
+    "authors": "Abdulaziz T. Bako, MBBS, MPH, Thomas Potter, Alan Pan",
+    "doi": "10.1161/STROKEAHA.125.050620",
+    "tags": ["Intracerebral Hemorrhage", "Postacute Care", "Discharge Destination", "MACE"],
+    "figures": [
+      {
+        "id": "fig_14_1",
+        "name": "Figure 2 - MACE发病率结果图",
+        "description": "脑出血患者急性后出院目的地与主要不良心血管事件的关系",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_14_fig_1.jpg",
+        "colors": [
+          {
+            "hex": "#6094ce",
+            "rgb": "rgb(96, 148, 206)",
+            "name": "Overall",
+            "usage": "全部"
+          },
+          {
+            "hex": "#de407a",
+            "rgb": "rgb(222, 64, 122)",
+            "name": "home",
+            "usage": "家"
+          },
+          {
+            "hex": "#4dbe93",
+            "rgb": "rgb(77, 190, 147)",
+            "name": "IRF",
+            "usage": "住院康复设施"
+          },
+          {
+            "hex": "#fddc32",
+            "rgb": "rgb(253, 220, 50)",
+            "name": "SNF",
+            "usage": "成熟护理设施"
+          },
+          {
+            "hex": "#4c2e90",
+            "rgb": "rgb(76, 46, 144)",
+            "name": "95% CIs",
+            "usage": "95%置信区间"
+          }
+        ]
+      }
+    ]
   }
 ]
