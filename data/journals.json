@@ -107,6 +107,12 @@
     "field": "medical_life_science",
     "subfield": "clinical_medicine"
   },
+  "stroke": {
+    "name": "Stroke",
+    "color": "#237d85",
+    "field": "medical_life_science",
+    "subfield": "clinical_medicine"
+  },
   "nature_medicine": {
     "name": "Nature Medicine",
     "color": "#c2410c",
