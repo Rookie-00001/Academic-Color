@@ -814,5 +814,84 @@
         ]
       }
     ]
+  },
+  {
+    "id": 13,
+    "journal": "physical_review_x",
+    "year": 2017,
+    "field": "natural_science",
+    "subfield": "physics",
+    "title": "Systematic Magnus-Based Approach for Suppressing Leakage and Nonadiabatic Errors in Quantum Dynamics",
+    "authors": "Hugo Ribeiro, Alexandre Baksic,and Aashish A.Clerk, ",
+    "doi": "10.1103/PhysRevX.7.011021",
+    "tags": ["Quantum Dynamics", "Magnus Expansion", "Leakage Errors", "Nonadiabatic Errors"],
+    "figures": [
+      {
+        "id": "fig_13_1",
+        "name": "Figure 3a - 保真度误差图",
+        "description": "系统中STIRAP型绝热态转移的保真度误差，作为绝热参数𝜈/𝐺0的函数",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_13_fig_1.jpg",
+        "colors": [
+          {
+            "hex": "#4b4b4b",
+            "rgb": "rgb(75, 75, 75)",
+            "name": "no corr.",
+            "usage": "未修正"
+          },
+          {
+            "hex": "#25733d",
+            "rgb": "rgb(37, 115, 61)",
+            "name": "first-order corr.",
+            "usage": "一阶马格努斯校正"
+          },
+          {
+            "hex": "#316293",
+            "rgb": "rgb(49, 98, 147)",
+            "name": "second-order corr.",
+            "usage": "二阶马格努斯校正"
+          },
+          {
+            "hex": "#a8535e",
+            "rgb": "rgb(168, 83, 94)",
+            "name": "second-order opt. corr.",
+            "usage": "最佳二阶马格努斯校正"
+          }
+        ]
+      },
+      {
+        "id": "fig_13_2",
+        "name": "Figure 3b - 泵脉冲曲线图",
+        "description": "通过二阶马格努斯算法预测的修正泵浦脉冲𝐺p⁡(𝑡)作为不同𝜈/𝐺0值的𝑡/𝑡f的函数",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_13_fig_2.jpg",
+        "colors": [
+          {
+            "hex": "#9240b6",
+            "rgb": "rgb(146, 64, 182)",
+            "name": "𝜈/𝐺0",
+            "usage": "0.2"
+          },
+          {
+            "hex": "#3c997f",
+            "rgb": "rgb(60, 153, 127)",
+            "name": "𝜈/𝐺0",
+            "usage": "0.8"
+          },
+          {
+            "hex": "#76aece",
+            "rgb": "rgb(118, 174, 206)",
+            "name": "𝜈/𝐺0",
+            "usage": "1.4"
+          },
+          {
+            "hex": "#cea03b",
+            "rgb": "rgb(206, 160, 59)",
+            "name": "𝜈/𝐺0",
+            "usage": "2.0"
+          }
+        ]
+      }
+    ]
   }
 ]
