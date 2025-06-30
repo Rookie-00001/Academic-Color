@@ -53,9 +53,9 @@
     "field": "natural_science",
     "subfield": "chemistry"
   },
-  "angew": {
-    "name": "Angew. Chem.",
-    "color": "#059669",
+  "chemical_rev": {
+    "name": "Chemical Reviews",
+    "color": "#264c88",
     "field": "natural_science",
     "subfield": "chemistry"
   },
