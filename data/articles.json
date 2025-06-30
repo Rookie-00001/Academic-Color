@@ -945,5 +945,147 @@
         ]
       }
     ]
+  },
+  {
+    "id": 15,
+    "journal": "chemical_rev",
+    "year": 2025,
+    "field": "natural_science",
+    "subfield": "chemistry",
+    "title": "Recent Advances in the Use of Ionic Liquids and Deep Eutectic Solvents for Lignocellulosic Biorefineries and Biobased Chemical and Material Production",
+    "authors": "Pedro Verdia Barbara.Hemant Choudhary,Pedro S.Nakasu,Amir Al-Ghatta,Yinglei Han,Cynthia Hopson,Raul l.Aravena,Dhirendra Kumar Mishra",
+    "doi": "10.1021/acs.chemrev.4c00754",
+    "tags": ["Ionic Liquids", "Deep Eutectic Solvents", "Lignocellulosic Biorefineries", "Biobased Chemicals"],
+    "figures": [
+      {
+        "id": "fig_15_1",
+        "name": "Figure 21 - 甘蔗渣脱木素的响应面",
+        "description": "使用 PIL 单乙醇乙酸铵在 120–150 °C 的温度范围内，停留时间为 30 至 150 分钟，甘蔗渣脱木素的响应面。",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_15_fig_1.png",
+        "colors": [
+          {
+            "hex": "#560b0d",
+            "rgb": "rgb(86, 11, 13)",
+            "name": ">60",
+            "usage": ">60"
+          },
+          {
+            "hex": "#cc221b",
+            "rgb": "rgb(204, 34, 27)",
+            "name": "<56",
+            "usage": "<56"
+          },
+          {
+            "hex": "#dffc30",
+            "rgb": "rgb(223, 252, 48)",
+            "name": "<46",
+            "usage": "<46"
+          },
+          {
+            "hex": "#64c61e",
+            "rgb": "rgb(100, 198, 30)",
+            "name": "<36",
+            "usage": "<36"
+          },
+          {
+            "hex": "#284d31",
+            "rgb": "rgb(40, 77, 49)",
+            "name": "<26",
+            "usage": "<26"
+          }
+        ]
+      },
+      {
+        "id": "fig_15_2",
+        "name": "Figure 30 - 脱木素程度图",
+        "description": "四种不同原料在170°C下用含有不同水浓度的预处理30分钟，固体负荷为1:5g G1时的脱木素程度",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_15_fig_2.png",
+        "colors": [
+          {
+            "hex": "#a6a6a6",
+            "rgb": "rgb(166, 166, 166)",
+            "name": "𝜈/𝐺0",
+            "usage": "0.2"
+          },
+          {
+            "hex": "#ed7d31",
+            "rgb": "rgb(237, 125, 49)",
+            "name": "𝜈/𝐺0",
+            "usage": "0.8"
+          },
+          {
+            "hex": "#0364fb",
+            "rgb": "rgb(3, 100, 251)",
+            "name": "𝜈/𝐺0",
+            "usage": "1.4"
+          },
+          {
+            "hex": "#ffbf02",
+            "rgb": "rgb(255, 191, 2)",
+            "name": "𝜈/𝐺0",
+            "usage": "2.0"
+          }
+        ]
+      },
+      {
+        "id": "fig_15_3",
+        "name": "Figure 44 - 分子量分布与加入的水量的函数关系图",
+        "description": "全沉淀和顺序分级木质素的分子量分布与芒草木质素添加量的函数关系",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_15_fig_3.png",
+        "colors": [
+          {
+            "hex": "#bef08e",
+            "rgb": "rgb(190, 240, 142)",
+            "name": "0.25eq",
+            "usage": "0.25eq"
+          },
+          {
+            "hex": "#32978f",
+            "rgb": "rgb(50, 151, 143)",
+            "name": "0.5eq",
+            "usage": "0.5eq"
+          },
+          {
+            "hex": "#e8ce55",
+            "rgb": "rgb(232, 206, 85)",
+            "name": "1eq",
+            "usage": "1eq"
+          },
+          {
+            "hex": "#c9723c",
+            "rgb": "rgb(201, 114, 60)",
+            "name": "1.5eq",
+            "usage": "1.5eq"
+          },
+          {
+            "hex": "#c65781",
+            "rgb": "rgb(198, 87, 129)",
+            "name": "2eq",
+            "usage": "2eq"
+          },
+          {
+            "hex": "#143f61",
+            "rgb": "rgb(20, 63, 97)",
+            "name": "2.5eq",
+            "usage": "2.5eq"
+          },
+          {
+            "hex": "#9a9bb9",
+            "rgb": "rgb(154, 155, 185))",
+            "name": "5eq",
+            "usage": "5eq"
+          },
+          {
+            "hex": "#ccc8d6",
+            "rgb": "rgb(204, 200, 214)",
+            "name": "Full precipitation",
+            "usage": "完全脱水"
+          }
+        ]
+      }
+    ]
   }
 ]
