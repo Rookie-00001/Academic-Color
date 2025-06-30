@@ -220,31 +220,30 @@ class UIComponents {
             const recentYears = years.slice(0, 3);
             const olderYears = years.slice(3);
             
-            // 最近年份
+            // 最近年份 - 移除数字显示
             recentYears.forEach(year => {
                 yearButtonsHTML += `
                     <button onclick="filterByYear(${year})" class="year-filter px-3 py-2 text-sm rounded-lg transition-all bg-theme-tertiary text-theme-primary hover:bg-theme-secondary" data-year="${year}">
-                        ${year} <span class="text-xs opacity-75">(${yearCounts[year]})</span>
+                        ${year}
                     </button>
                 `;
             });
 
-            // 较早年份合并显示
-            const olderCount = olderYears.reduce((sum, year) => sum + yearCounts[year], 0);
+            // 较早年份合并显示 - 移除数字显示
             const oldestYear = Math.min(...olderYears);
             const newestOldYear = Math.max(...olderYears);
             
             yearButtonsHTML += `
                 <button onclick="filterByYearRange(${oldestYear}, ${newestOldYear})" class="year-filter px-3 py-2 text-sm rounded-lg transition-all bg-theme-tertiary text-theme-primary hover:bg-theme-secondary" data-year="range-${oldestYear}-${newestOldYear}">
-                    ${oldestYear}-${newestOldYear} <span class="text-xs opacity-75">(${olderCount})</span>
+                    ${oldestYear}-${newestOldYear}
                 </button>
             `;
         } else {
-            // 年份较少时，显示所有年份
+            // 年份较少时，显示所有年份 - 移除数字显示
             years.forEach(year => {
                 yearButtonsHTML += `
                     <button onclick="filterByYear(${year})" class="year-filter px-3 py-2 text-sm rounded-lg transition-all bg-theme-tertiary text-theme-primary hover:bg-theme-secondary" data-year="${year}">
-                        ${year} <span class="text-xs opacity-75">(${yearCounts[year]})</span>
+                        ${year}
                     </button>
                 `;
             });
