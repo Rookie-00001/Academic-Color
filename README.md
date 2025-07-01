@@ -1,4 +1,4 @@
-# 学术配色库 Academic Color Palettes
+# 学术配色库 Academic Color
 
 一个专为学术研究和科学可视化设计的配色方案库，收录来自顶级期刊的精美图表配色。
 
