@@ -1087,5 +1087,87 @@
         ]
       }
     ]
+  },
+  {
+    "id": 16,
+    "journal": "nature_machine_intelligence",
+    "year": 2025,
+    "field": "engineering_technology",
+    "subfield": "computer_science",
+    "title": "Model-based reinforcement learning for ultrasound-driven autonomous microrobots",
+    "authors": "Medany, M., Piglia, L., Achenbach, L. ",
+    "doi": "10.1038/s42256-025-01054-2",
+    "tags": ["Biomedical engineering", "Mechanical engineering"],
+    "figures": [
+      {
+        "id": "fig_16_1",
+        "name": "Figure 5- 训练目标成功率图",
+        "description": "不同环境中达到目标的成功率与训练步骤数的关系图",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_16_fig_1.png",
+        "colors": [
+          {
+            "hex": "#3173a4",
+            "rgb": "rgb(49, 115, 164)",
+            "name": "Empty",
+            "usage": "Empty"
+          },
+          {
+            "hex": "#b6c7e0",
+            "rgb": "rgb(182, 199, 224)",
+            "name": "4 squares",
+            "usage": "4 squares"
+          },
+          {
+            "hex": "#e0822a",
+            "rgb": "rgb(224, 130, 42)",
+            "name": "Racetrack",
+            "usage": "Racetrack"
+          },
+          {
+            "hex": "#eebb8c",
+            "rgb": "rgb(238, 187, 140)",
+            "name": "Tributary",
+            "usage": "Tributary"
+          },
+          {
+            "hex": "#3a9339",
+            "rgb": "rgb(58, 147, 57)",
+            "name": "Vascular",
+            "usage": "Vascular"
+          },
+          {
+            "hex": "#9ed594",
+            "rgb": "rgb(158, 213, 148)",
+            "name": "Vascular 2",
+            "usage": "Vascular 2"
+          },
+          {
+            "hex": "#bf3d3e",
+            "rgb": "rgb(191, 61, 62)",
+            "name": "Squares",
+            "usage": "Squares"
+          },
+          {
+            "hex": "#f3a5a4",
+            "rgb": "rgb(243, 165, 164)",
+            "name": "Maze easy",
+            "usage": "Maze easy"
+          },
+          {
+            "hex": "#9571b1",
+            "rgb": "rgb(149, 113, 177)",
+            "name": "Maze medium",
+            "usage": "Maze medium"
+          },
+          {
+            "hex": "#c5b5cf",
+            "rgb": "rgb(197, 181, 207)",
+            "name": "Maze hard",
+            "usage": "Maze hard"
+          }
+        ]
+      }
+    ]
   }
 ]
