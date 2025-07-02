@@ -1169,5 +1169,90 @@
         ]
       }
     ]
+  },
+  {
+    "id": 17,
+    "journal": "nature_medicine",
+    "year": 2022,
+    "field": "medical_life_science",
+    "subfield": "basic_medicine",
+    "title": "Longitudinal dynamics of clonal hematopoiesis identifies gene-specific fitness effects",
+    "authors": "Robertson, N.A., Latorre-Crespo, E., Terradas-Terradas, M.",
+    "doi": "10.1038/s41591-022-01883-3",
+    "tags": ["Cancer genomics", "Cancer stem cells", "Haematological cancer", "Risk factors"],
+    "figures": [
+      {
+        "id": "fig_17_1",
+        "name": "Figure 3A - 适合度分布图",
+        "description": "按基因类别划分的适合度分布",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_17_fig_1.png",
+        "colors": [
+          {
+            "hex": "#90bbdc",
+            "rgb": "rgb(144, 187, 220)",
+            "name": "TF development",
+            "usage": "TF development"
+          },
+          {
+            "hex": "#ffbf88",
+            "rgb": "rgb(255, 191, 136)",
+            "name": "Splicing",
+            "usage": "剪接"
+          },
+          {
+            "hex": "#96d096",
+            "rgb": "rgb(150, 208, 150)",
+            "name": "Histone regulation",
+            "usage": "组蛋白调控"
+          },
+          {
+            "hex": "#e99593",
+            "rgb": "rgb(233, 149, 147)",
+            "name": "DNA methylation",
+            "usage": "DNA损伤"
+          },
+          {
+            "hex": "#c8b3de",
+            "rgb": "rgb(200, 179, 222)",
+            "name": "促有丝分裂",
+            "usage": "<26"
+          },
+          {
+            "hex": "#c7a9a7",
+            "rgb": "rgb(199, 169, 167)",
+            "name": "DNA methylation",
+            "usage": "DNA甲基化"
+          },
+          {
+            "hex": "#f3bce3",
+            "rgb": "rgb(243, 188, 227)",
+            "name": "Cohesin",
+            "usage": "粘附素"
+          }
+        ]
+      },
+      {
+        "id": "fig_17_2",
+        "name": "Figure 3C - 小提琴图",
+        "description": "轨迹中时间点数量对推断适应度分布的影响",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_17_fig_2.png",
+        "colors": [
+          {
+            "hex": "#91d8d4",
+            "rgb": "rgb(145, 216, 212)",
+            "name": "2",
+            "usage": "2"
+          },
+          {
+            "hex": "#ccb7ef",
+            "rgb": "rgb(204, 183, 239)",
+            "name": ">2",
+            "usage": ">2"
+          }
+        ]
+      }
+    ]
   }
 ]
