@@ -1254,5 +1254,66 @@
         ]
       }
     ]
+  },
+  {
+    "id": 18,
+    "journal": "lancet",
+    "year": 2025,
+    "field": "medical_life_science",
+    "subfield": "clinical_medicine",
+    "title": "Cancelled elective operations and 28-day breaches in the NHS in England: an interrupted time series analysis of the 2002 penalty policy, 2008 recession, and COVID-19 pandemic (1994–2023)",
+    "authors": "Laura Quinn, Paul Bird, Timothy P. Hofer, Richard Lilforda",
+    "doi": "10.1016/j.lanepe.2025.101368",
+    "tags": ["Elective Operations", "COVID-19 Pandemic", "28-day Breaches", "Interrupted Time Series Analysis"],
+    "figures": [
+      {
+        "id": "fig_18_1",
+        "name": "Figure 1 - 入院、取消手术对比图",
+        "description": "从 1994 年到 2023 年，NHS 英格兰医院信托基金每个财政季度的全国选择性入院、取消手术和违规数量。",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_18_fig_1.jpg",
+        "colors": [
+          {
+            "hex": "#1b85ff",
+            "rgb": "rgb(27, 133, 255)",
+            "name": "Elective Admissions",
+            "usage": "选择性入院"
+          },
+          {
+            "hex": "#90353b",
+            "rgb": "rgb(144, 53, 59)",
+            "name": "Cancelled Operations",
+            "usage": "取消手术"
+          },
+          {
+            "hex": "#006000",
+            "rgb": "rgb(0, 96, 0)",
+            "name": "Breaches",
+            "usage": "违规"
+          }
+        ]
+      },
+      {
+        "id": "fig_18_2",
+        "name": "Figure 3 - 违反28天取消操作标准的行为图",
+        "description": "由于A & E部门的存在，NHS医院信托基金中总计取消的操作和违规行为的时间序列中断。",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_18_fig_2.jpg",
+        "colors": [
+          {
+            "hex": "#e18105",
+            "rgb": "rgb(225, 129, 5)",
+            "name": "A&E department",
+            "usage": "急诊科"
+          },
+          {
+            "hex": "#1c4772",
+            "rgb": "rgb(28, 71, 114)",
+            "name": "No A&E department",
+            "usage": "没有急诊科"
+          }
+        ]
+      }
+    ]
   }
 ]
