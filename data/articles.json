@@ -1315,5 +1315,84 @@
         ]
       }
     ]
+  },
+  {
+    "id": 19,
+    "journal": "nature_cell_biology",
+    "year": 2025,
+    "field": "natural_science",
+    "subfield": "biology",
+    "title": "Cancelled elective operations and 28-day breaches in the NHS in England: an interrupted time series analysis of the 2002 penalty policy, 2008 recession, and COVID-19 pandemic (1994–2023)",
+    "authors": "Li, T.Y., Gao, A.W., Yang, R. ",
+    "doi": "10.1038/s41556-025-01693-y",
+    "tags": ["Ageing", "Lysosomes", "Stress signalling"],
+    "figures": [
+      {
+        "id": "fig_19_1",
+        "name": "Figure 3k - 相对结合比率图",
+        "description": "用指定RNAi处理的蠕虫的蛋白质印迹(j)和ChIP–qPCR(k)(n = 4个生物学上独立的样品)。",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_19_fig_1.png",
+        "colors": [
+          {
+            "hex": "#ffffff",
+            "rgb": "rgb(255, 255, 255)",
+            "name": "ev",
+            "usage": "ev"
+          },
+          {
+            "hex": "#dc0d0d",
+            "rgb": "rgb(220, 13, 13)",
+            "name": "vha-6",
+            "usage": "vha-6"
+          },
+          {
+            "hex": "#bfc0ff",
+            "rgb": "rgb(191, 192, 255)",
+            "name": "elt-2",
+            "usage": "elt-2"
+          },
+          {
+            "hex": "#0303f2",
+            "rgb": "rgb(3, 3, 242)",
+            "name": "elt-2 +vha-6",
+            "usage": "elt-2 +vha-6"
+          }
+        ]
+      },
+      {
+        "id": "fig_19_2",
+        "name": "Figure 3l - 生存百分比图",
+        "description": "用指示的RNAi处理蠕虫的存活率",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_19_fig_2.png",
+        "colors": [
+          {
+            "hex": "#7b7573",
+            "rgb": "rgb(123, 117, 115)",
+            "name": "ev",
+            "usage": "ev"
+          },
+          {
+            "hex": "#d19594",
+            "rgb": "rgb(209, 149, 148)",
+            "name": "vha-6",
+            "usage": "vha-6"
+          },
+          {
+            "hex": "#b5d0e3",
+            "rgb": "rgb(181, 208, 227)",
+            "name": "elt-2",
+            "usage": "elt-2"
+          },
+          {
+            "hex": "#e8cd99",
+            "rgb": "rgb(232, 205, 153)",
+            "name": "elt-2 +vha-6",
+            "usage": "elt-2 +vha-6"
+          }
+        ]
+      }
+    ]
   }
 ]
