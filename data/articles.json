@@ -1394,5 +1394,45 @@
         ]
       }
     ]
+  },
+  {
+    "id": 20,
+    "journal": "jama",
+    "year": 2023,
+    "field": "medical_life_science",
+    "subfield": "clinical_medicine",
+    "title": "Reducing Opioid Use for Chronic Pain With a Group-Based Intervention",
+    "authors": "Harbinder K. Sandhu, DHealthPsy; Katie Booth, MSc; Andrea D. Furlan, MD, PhD",
+    "doi": "10.1001/jama.2023.6454",
+    "tags": ["Opioid Use", "Chronic Pain", "Randomized Clinical Trial"],
+    "figures": [
+      {
+        "id": "fig_20_1",
+        "name": "Figure 2 - 药物使用评分图",
+        "description": "基线和12个月时的疼痛干扰和吗啡等效剂量阿片类药物使用评分",
+        "figure_type": "line_plot",
+        "image_path": "data/images/article_20_fig_1.png",
+        "colors": [
+          {
+            "hex": "#31496e",
+            "rgb": "rgb(49, 73, 110)",
+            "name": "Participants, No.",
+            "usage": "参与者"
+          },
+          {
+            "hex": "#90a9b7",
+            "rgb": "rgb(144, 169, 183)",
+            "name": "Baseline",
+            "usage": "基准"
+          },
+          {
+            "hex": "#d3a05e",
+            "rgb": "rgb(211, 160, 94)",
+            "name": "12 mo",
+            "usage": "12个月"
+          }
+        ]
+      }
+    ]
   }
 ]
